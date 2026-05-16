@@ -1,16 +1,22 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import logging
 import os
 import re
 import requests
 import urllib3
 import unicodedata
 import tempfile
-from werkzeug.utils import secure_filename
-import ocr_augments
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# --- Cấu hình và Hằng số ---
+# Gom tất cả các giá trị cấu hình và hằng số vào một chỗ để dễ quản lý
+TEAM_SIZE = 3  # Chế độ Võ Đài mới có đội 3 người
+MAX_TEAMS_IN_HUD = 6 # HUD hiện tại hỗ trợ tối đa 6 đội
+NORMAL_ITEM_SLOT_LIMIT = 6 # Các slot trang bị thông thường (0-5)
+
+# --- Khởi tạo ứng dụng Flask ---
 app = Flask(__name__, static_folder="LOL_Broadcast_Assets_Final", static_url_path="/assets")
 CORS(app)
 
@@ -58,22 +64,6 @@ def clean_name_key(value):
         return ""
     normalized = re.sub(r"[\s'\.-]", "", value).lower()
     return normalized
-
-
-def get_avatar_name(champion_name):
-    """
-    Chuyển đổi tên tướng từ API thành tên file ảnh chuẩn của Data Dragon.
-    Nếu không nằm trong map thì loại bỏ khoảng trắng/kiểu viết khác.
-    """
-    if not champion_name:
-        return "Unknown"
-
-    lookup_key = clean_name_key(champion_name)
-    if lookup_key in CHAMPION_NAME_MAP:
-        return CHAMPION_NAME_MAP[lookup_key]
-
-    return re.sub(r"[\s'\.-]", "", champion_name)
-
 
 def normalize_key(value):
     if not value:
@@ -246,148 +236,138 @@ def resolve_augment_icon(item_id):
         return f"https://raw.communitydragon.org{icon_path}"
     return f"https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/{item_id}.png"
 
-
-@app.route('/api/ocr', methods=['POST'])
-def ocr_upload():
-    # Accept multipart form upload with field 'image'
-    if 'image' not in request.files:
-        return jsonify({'error': 'no image file provided'}), 400
-    f = request.files['image']
-    if f.filename == '':
-        return jsonify({'error': 'empty filename'}), 400
-    filename = secure_filename(f.filename)
-    tmp = tempfile.NamedTemporaryFile(delete=False, suffix='_'+filename)
-    f.save(tmp.name)
+def _fetch_live_game_data():
+    """Hàm con: Chỉ thực hiện việc gọi API và trả về dữ liệu JSON."""
     try:
-        result = ocr_augments.ocr_image_path(tmp.name)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-    return jsonify({'status': 'ok', 'ocr': result})
+        response = requests.get(LIVE_API_URL, verify=False, timeout=1)
+        response.raise_for_status()  # Tự động báo lỗi nếu status code không phải 200
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        app.logger.warning(f"Could not connect to Live API: {e}")
+        return None
 
+def _parse_player_items_and_augments(raw_items):
+    """Hàm con: Tách trang bị và lõi nâng cấp từ danh sách thô."""
+    items = []
+    augments = []
+    if not raw_items:
+        return items, augments
 
-@app.route('/api/scan_augments', methods=['GET'])
-def scan_augments():
-    # scans c:/CODE/screenshot_data for images and returns detected augment cell texts
-    folder = os.path.join(os.path.dirname(__file__), 'screenshot_data')
-    res = ocr_augments.process_folder_for_augments(folder)
-    return jsonify({'status': 'ok', 'results': res})
+    for it in sorted(raw_items, key=lambda item: item.get("slot", 99)):
+        slot = it.get("slot", 99)
+        item_id = it.get("itemID", 0)
+        if item_id == 0:
+            continue
+
+        # Trang bị thông thường nằm ở 6 slot đầu
+        if slot < NORMAL_ITEM_SLOT_LIMIT:
+            items.append({"id": item_id, "slot": slot})
+        # Các slot còn lại được coi là Lõi Nâng Cấp
+        else:
+            augments.append({"id": item_id, "name": it.get("displayName")})
+    
+    return items, augments
+
+def _parse_player_summoner_spells(s_spells_data):
+    """Hàm con: Trích xuất tên của các phép bổ trợ."""
+    s1_name, s2_name = "", ""
+    
+    def parse_spell(spell_data):
+        if not spell_data or not isinstance(spell_data, dict):
+            return ""
+        return spell_data.get("displayName") or spell_data.get("rawDisplayName") or ""
+
+    if isinstance(s_spells_data, dict):
+        s1_name = parse_spell(s_spells_data.get("summonerSpellOne"))
+        s2_name = parse_spell(s_spells_data.get("summonerSpellTwo"))
+    elif isinstance(s_spells_data, list):
+        if len(s_spells_data) > 0:
+            s1_name = parse_spell(s_spells_data[0])
+        if len(s_spells_data) > 1:
+            s2_name = parse_spell(s_spells_data[1])
+            
+    return s1_name, s2_name
+
+def _transform_player_data(player_data):
+    """Hàm con: Chuyển đổi dữ liệu thô của một người chơi thành định dạng cho HUD."""
+    # 1. Tách trang bị và lõi
+    raw_items = player_data.get("items", []) or []
+    items, augments_from_items = _parse_player_items_and_augments(raw_items)
+
+    # 2. Lấy Lõi từ trường "augments" nếu có (ưu tiên)
+    augments = []
+    raw_augments_field = player_data.get("augments", []) or []
+    for raw_aug in raw_augments_field:
+        aug_id = raw_aug.get("itemID") or raw_aug.get("id") or 0
+        if aug_id > 0:
+            augments.append({"id": aug_id, "name": raw_aug.get("displayName")})
+    
+    # Nếu không có, dùng danh sách lõi từ trang bị
+    if not augments:
+        augments = augments_from_items
+
+    # 3. Lấy phép bổ trợ
+    s_spells = player_data.get("summonerSpells", {}) or {}
+    s1_name, s2_name = _parse_player_summoner_spells(s_spells)
+
+    # 4. Lấy tên tướng chuẩn
+    raw_champ_name = player_data.get("rawChampionName", "")
+    # Tên chuẩn thường nằm sau "game_character_displayname_"
+    champ_key = raw_champ_name.split('_')[-1] if raw_champ_name else player_data.get("championName", "")
+    champ_display = player_data.get("championName", champ_key)
+
+    # 5. Tạo đối tượng trả về
+    return {
+        "name": player_data.get("summonerName", ""),
+        "champion": champ_display,
+        "avatar": resolve_champion_icon(champ_key),
+        "level": player_data.get("level", 1),
+        "is_dead": player_data.get("isDead", False),
+        "kills": player_data.get("scores", {}).get("kills", 0),
+        "deaths": player_data.get("scores", {}).get("deaths", 0),
+        "items": [
+            {"id": it["id"], "slot": it["slot"], "icon": resolve_item_icon(it["id"])}
+            for it in items
+        ],
+        "augments": [
+            {"id": aug["id"], "name": aug.get("name", ""), "icon": resolve_augment_icon(aug["id"])}
+            for aug in augments[:6] # Giới hạn 6 lõi để tránh tràn giao diện
+        ],
+        "summoners": [
+            resolve_spell_icon(s1_name),
+            resolve_spell_icon(s2_name)
+        ]
+    }
 
 @app.route('/api/hud')
 def get_arena_data():
+    """Endpoint chính: Lấy dữ liệu game, xử lý và trả về định dạng cho HUD."""
+    game_data = _fetch_live_game_data()
+    if not game_data:
+        return jsonify({"status": "waiting", "error": "Could not connect to game client. Is the game running?"}), 200
+
     try:
-        response = requests.get(LIVE_API_URL, verify=False, timeout=1)
-        if response.status_code == 200:
-            data = response.json()
-            all_players = data.get("allPlayers", [])
+        all_players = game_data.get("allPlayers", [])
+        # Sắp xếp người chơi theo ID để đảm bảo gom đội chính xác
+        all_players.sort(key=lambda p: p.get('participantID', 0))
+        
+        teams = {}
+        for i in range(0, len(all_players), TEAM_SIZE):
+            team_id = (i // TEAM_SIZE) + 1
+            if team_id > MAX_TEAMS_IN_HUD:
+                break
             
-            # Sắp xếp người chơi theo ID để đảm bảo gom đội chính xác trong Võ Đài
-            all_players.sort(key=lambda p: p.get('participantID', 0))
-            
-            perfect_teams = {}
-            team_counter = 1
-            
-            # Chế độ Võ Đài mới có các đội 3 người
-            for i in range(0, len(all_players), 3):
-                # HUD được thiết kế cho 6 đội, bỏ qua các đội thừa
-                if team_counter > 6:
-                    break
-                
-                player_trio = all_players[i:i+3]
-                t_key = f"team_{team_counter}"
-                perfect_teams[t_key] = []
+            player_group = all_players[i:i + TEAM_SIZE]
+            team_key = f"team_{team_id}"
+            teams[team_key] = [_transform_player_data(p) for p in player_group]
+        
+        game_time = game_data.get("gameData", {}).get("gameTime", 0)
+        return jsonify({"status": "in_game", "time": game_time, "teams": teams})
 
-                for p in player_trio:
-                    # DEBUG: In tất cả keys của player object
-                    print(f"\n=== Player: {p.get('summonerName')} ===")
-                    print(f"All keys: {list(p.keys())}")
-                    
-                    # Kiểm tra xem có trường nào chứa augment không
-                    for key in p.keys():
-                        if 'augment' in key.lower():
-                            print(f"Found augment-related key: {key} = {p[key]}")
-                    
-                    # Tách Lõi Nâng Cấp và trang bị / item chính
-                    items = []
-                    augments = []
-                    raw_items = p.get("items", []) or []
-                    
-                    for it in sorted(raw_items, key=lambda item: item.get("slot", 0)):
-                        slot = it.get("slot", 0)
-                        item_id = it.get("itemID", 0)
-                        if slot < 6:
-                            items.append({"id": item_id, "slot": slot})
-                        elif item_id > 0:
-                            augments.append({"id": item_id, "name": it.get("displayName")})
-
-                    # Nếu API có trường augments riêng, ưu tiên dùng trường này
-                    for raw_aug in p.get("augments", []) or []:
-                        aug_id = raw_aug.get("itemID") or raw_aug.get("id") or 0
-                        if aug_id > 0:
-                            augments.append({"id": aug_id, "name": raw_aug.get("displayName")})
-
-                    def parse_spell(spell_data):
-                        if not spell_data:
-                            return ""
-                        if isinstance(spell_data, dict):
-                            display_name = spell_data.get("displayName") or spell_data.get("rawDisplayName")
-                            return display_name or ""
-                        return str(spell_data)
-
-                    s_spells = p.get("summonerSpells", {}) or {}
-                    if isinstance(s_spells, dict):
-                        s1_raw = s_spells.get("summonerSpellOne") if isinstance(s_spells.get("summonerSpellOne"), dict) else {}
-                        s2_raw = s_spells.get("summonerSpellTwo") if isinstance(s_spells.get("summonerSpellTwo"), dict) else {}
-                    elif isinstance(s_spells, list):
-                        s1_raw = s_spells[0].get("rawDisplayName", "") if len(s_spells) > 0 and isinstance(s_spells[0], dict) else ""
-                        s2_raw = s_spells[1].get("rawDisplayName", "") if len(s_spells) > 1 and isinstance(s_spells[1], dict) else ""
-                    else:
-                        s1_raw = ""
-                        s2_raw = ""
-
-                    s1_id = parse_spell(s1_raw)
-                    s2_id = parse_spell(s2_raw)
-
-                    # Lấy tên tướng chuẩn nhất từ 'rawChampionName' hoặc championName
-                    raw_champ_name = p.get("rawChampionName", "")
-                    champ_key = raw_champ_name.split('_')[-1] if raw_champ_name else p.get("championName", "")
-                    if normalize_key(champ_key) in ("name", "champion", "championname", "displayname"):
-                        champ_key = p.get("championName", "")
-                    champ_display = p.get("championName", champ_key)
-
-                    perfect_teams[t_key].append({
-                        "name": p.get("summonerName", ""),
-                        "champion": champ_display,
-                        "avatar": resolve_champion_icon(champ_key),
-                        "level": p.get("level", 1),
-                        "is_dead": p.get("isDead", False),
-                        "kills": p.get("scores", {}).get("kills", 0),
-                        "deaths": p.get("scores", {}).get("deaths", 0),
-                        "items": [
-                            {
-                                "id": it["id"],
-                                "slot": it["slot"],
-                                "icon": resolve_item_icon(it["id"])
-                            }
-                            for it in items
-                        ],
-                        "augments": [
-                            {
-                                "id": aug["id"],
-                                "name": aug.get("name", ""),
-                                "icon": resolve_augment_icon(aug["id"])
-                            }
-                            for aug in augments[:6]
-                        ],
-                        "summoners": [
-                            resolve_spell_icon(s1_id),
-                            resolve_spell_icon(s2_id)
-                        ]
-                    })
-                team_counter += 1
-            
-            return jsonify({"status": "in_game", "time": data.get("gameData", {}).get("gameTime", 0), "teams": perfect_teams})
     except Exception as e:
-        return jsonify({"status": "waiting", "error": str(e)}), 200
+        app.logger.error(f"An unexpected error occurred during data transformation: {e}", exc_info=True)
+        return jsonify({"status": "error", "error": "An internal error occurred while processing game data."}), 500
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    # Bật chế độ debug sẽ cho thông báo lỗi chi tiết hơn khi phát triển
+    app.run(port=5000, debug=True)

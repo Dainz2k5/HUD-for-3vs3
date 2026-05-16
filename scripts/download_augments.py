@@ -26,11 +26,14 @@ def scrape_and_download_augments():
     """
     print("🔎 Đang cào dữ liệu Lõi Nâng Cấp từ Community Dragon...")
     
-    aug_dir = "LOL_Broadcast_Assets_Final/Nang_Cap_Vo_Dai"
+    # Xác định đường dẫn tuyệt đối để script chạy đúng từ bất kỳ đâu.
+    # __file__ là đường dẫn đến file script hiện tại (download_augments.py)
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    aug_dir = os.path.join(project_root, "app", "static", "Augments")
     os.makedirs(aug_dir, exist_ok=True)
     
     # ĐÂY LÀ THƯ MỤC CHỨA ẢNH RAW CỦA CHẾ ĐỘ VÕ ĐÀI (CHERRY)
-    base_url = "https://raw.communitydragon.org/latest/game/assets/ux/cherry/augments/icons/"
+    base_url = "https://raw.communitydragon.org/16.10/game/assets/ux/cherry/augments/icons/"
     
     try:
         response = requests.get(base_url)

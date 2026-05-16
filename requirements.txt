@@ -4,3 +4,6 @@ Pillow
 flask
 flask-cors
 requests
+urllib3
+beautifulsoup4
+lxml

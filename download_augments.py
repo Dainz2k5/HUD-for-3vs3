@@ -26,7 +26,8 @@ def scrape_and_download_augments():
     """
     print("🔎 Đang cào dữ liệu Lõi Nâng Cấp từ Community Dragon...")
     
-    aug_dir = "LOL_Broadcast_Assets_Final/Nang_Cap_Vo_Dai"
+    # Đường dẫn tương đối từ thư mục gốc của dự án
+    aug_dir = "app/static/Nang_Cap_Vo_Dai"
     os.makedirs(aug_dir, exist_ok=True)
     
     # ĐÂY LÀ THƯ MỤC CHỨA ẢNH RAW CỦA CHẾ ĐỘ VÕ ĐÀI (CHERRY)

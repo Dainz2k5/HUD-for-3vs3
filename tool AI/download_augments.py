@@ -26,7 +26,8 @@ def scrape_and_download_augments():
     """
     print("🔎 Đang cào dữ liệu Lõi Nâng Cấp từ Community Dragon...")
     
-    aug_dir = "LOL_Broadcast_Assets_Final/Nang_Cap_Vo_Dai"
+    # Đường dẫn tương đối từ thư mục gốc của dự án
+    aug_dir = "app/static/Nang_Cap_Vo_Dai"
     os.makedirs(aug_dir, exist_ok=True)
     
     # ĐÂY LÀ THƯ MỤC CHỨA ẢNH RAW CỦA CHẾ ĐỘ VÕ ĐÀI (CHERRY)
@@ -35,14 +36,9 @@ def scrape_and_download_augments():
     try:
         response = requests.get(base_url)
         response.raise_for_status()
+        # Sử dụng lxml để tăng tốc độ, nếu chưa có hãy cài bằng: pip install lxml
+        soup = BeautifulSoup(response.text, 'lxml')
 
-        try:
-            # Ưu tiên dùng lxml vì tốc độ nhanh hơn. Cài đặt bằng: pip install lxml
-            soup = BeautifulSoup(response.text, 'lxml')
-        except Exception:
-            # Nếu lxml chưa được cài, dùng parser mặc định của Python (chậm hơn)
-            print("⚠️  Cảnh báo: Không tìm thấy parser 'lxml', chuyển sang 'html.parser'. Để tăng tốc, hãy cài đặt bằng: pip install lxml")
-            soup = BeautifulSoup(response.text, 'html.parser')
         # Tìm tất cả các thẻ 'a' có href kết thúc bằng '.png'
         png_links = [a['href'] for a in soup.find_all('a') if a.get('href', '').endswith('.png')]
 
