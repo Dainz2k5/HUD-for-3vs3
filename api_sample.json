@@ -1,0 +1,113 @@
+{
+  "keys": [
+    "activePlayer",
+    "allPlayers",
+    "events",
+    "gameData"
+  ],
+  "gameDataKeys": [
+    "gameMode",
+    "gameTime",
+    "mapName",
+    "mapNumber",
+    "mapTerrain"
+  ],
+  "allPlayersLen": 18,
+  "player0Keys": [
+    "championName",
+    "isBot",
+    "isDead",
+    "items",
+    "level",
+    "position",
+    "rawChampionName",
+    "rawSkinName",
+    "respawnTimer",
+    "riotId",
+    "riotIdGameName",
+    "riotIdTagLine",
+    "runes",
+    "scores",
+    "screenPositionBottom",
+    "screenPositionCenter",
+    "skinID",
+    "skinName",
+    "summonerName",
+    "summonerSpells",
+    "team"
+  ],
+  "player0Sample": {
+    "summonerName": "Solo Levelling#2002",
+    "championName": "Zaahen",
+    "rawChampionName": "game_character_displayname_Zaahen",
+    "items": [
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Giày Thép Gai",
+        "itemID": 223047,
+        "price": 500,
+        "rawDescription": "GeneratedTip_Item_223047_Description",
+        "rawDisplayName": "Item_223047_Name",
+        "slot": 0
+      },
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Búa Rìu Sát Thần",
+        "itemID": 446632,
+        "price": 2750,
+        "rawDescription": "GeneratedTip_Item_446632_Description",
+        "rawDisplayName": "Item_446632_Name",
+        "slot": 1
+      },
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Cưa Xích Hóa Kỹ",
+        "itemID": 226609,
+        "price": 2500,
+        "rawDescription": "GeneratedTip_Item_226609_Description",
+        "rawDisplayName": "Item_226609_Name",
+        "slot": 2
+      },
+      {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Liềm Xích Huyết Thực",
+        "itemID": 222517,
+        "price": 2500,
+        "rawDescription": "GeneratedTip_Item_2517_Description",
+        "rawDisplayName": "Item_2517_Name",
+        "slot": 3
+      },
+      {
+        "canUse": true,
+        "consumable": false,
+        "count": 1,
+        "displayName": "Máy Quét Hextech",
+        "itemID": 3348,
+        "price": 0,
+        "rawDescription": "GeneratedTip_Item_3348_Description",
+        "rawDisplayName": "game_item_displayname_3348",
+        "slot": 6
+      }
+    ],
+    "summonerSpells": {
+      "summonerSpellOne": {
+        "displayName": "Tẩu Thoát",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+      },
+      "summonerSpellTwo": {
+        "displayName": "Tốc Biến",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+      }
+    }
+  }
+}

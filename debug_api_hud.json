@@ -1,0 +1,904 @@
+{
+  "status": "in_game",
+  "teams": {
+    "team_1": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Zaahen_Icon.png",
+        "champion": "Zaahen",
+        "deaths": 7,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Thép Gai_223047.png",
+            "id": 223047,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Búa Rìu Sát Thần_446632.png",
+            "id": 446632,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Cưa Xích Hóa Kỹ_226609.png",
+            "id": 226609,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Liềm Xích Huyết Thực_222517.png",
+            "id": 222517,
+            "slot": 3
+          }
+        ],
+        "kills": 3,
+        "level": 14,
+        "name": "Solo Levelling#2002",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Volibear_Icon.png",
+        "champion": "Volibear",
+        "deaths": 7,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Hiến Tế Hư Không_223069.png",
+            "id": 223069,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Thủy Ngân_223111.png",
+            "id": 223111,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Búa Rìu Sát Thần_446632.png",
+            "id": 446632,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trái Tim Khổng Thần_223084.png",
+            "id": 223084,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Áo Choàng Diệt Vong_222502.png",
+            "id": 222502,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giáp Gai_223075.png",
+            "id": 223075,
+            "slot": 5
+          }
+        ],
+        "kills": 4,
+        "level": 18,
+        "name": "Lancer01#LCM",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "https://ddragon.leagueoflegends.com/cdn/latest/img/champion/Kaisa.png",
+        "champion": "Kai'Sa",
+        "deaths": 6,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Cuồng Nộ_223006.png",
+            "id": 223006,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Vương Miện Quỷ Vương_443056.png",
+            "id": 443056,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Móc Diệt Thủy Quái_226672.png",
+            "id": 226672,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nanh Nashor_223115.png",
+            "id": 223115,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Lưỡi Kiếm Hoàng Hôn_447121.png",
+            "id": 447121,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Suy Vong_223153.png",
+            "id": 223153,
+            "slot": 5
+          }
+        ],
+        "kills": 10,
+        "level": 18,
+        "name": "Em Long Ixtal#ịuliz",
+        "summoners": [
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png"
+        ]
+      }
+    ],
+    "team_2": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Nautilus_Icon.png",
+        "champion": "Nautilus",
+        "deaths": 7,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giáp Máu Warmog_443083.png",
+            "id": 443083,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trái Tim Khổng Thần_223084.png",
+            "id": 223084,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giáp Gai_223075.png",
+            "id": 223075,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Áo Choàng Diệt Vong_222502.png",
+            "id": 222502,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Jak'Sho, Vỏ Bọc Thích Nghi_226665.png",
+            "id": 226665,
+            "slot": 4
+          }
+        ],
+        "kills": 1,
+        "level": 15,
+        "name": "OTama#OTO",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "https://ddragon.leagueoflegends.com/cdn/latest/img/champion/Name.png",
+        "champion": "Aatrox",
+        "deaths": 8,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Cuồng Nộ_223006.png",
+            "id": 223006,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Mãng Xà Kích_226698.png",
+            "id": 226698,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Đảo Chính_447115.png",
+            "id": 447115,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Áo Choàng Bóng Tối_223814.png",
+            "id": 223814,
+            "slot": 3
+          }
+        ],
+        "kills": 2,
+        "level": 14,
+        "name": "Nidaleee#MRD96",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Renekton_Icon.png",
+        "champion": "Renekton",
+        "deaths": 8,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Thép Gai_223047.png",
+            "id": 223047,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Móng Vuốt Ám Muội_226693.png",
+            "id": 226693,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Huyết Kiếm_223072.png",
+            "id": 223072,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nguyệt Đao_226692.png",
+            "id": 226692,
+            "slot": 3
+          }
+        ],
+        "kills": 5,
+        "level": 16,
+        "name": "i miss her#mizu7",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      }
+    ],
+    "team_3": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Ambessa_Icon.png",
+        "champion": "Ambessa",
+        "deaths": 10,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Búa Rìu Sát Thần_446632.png",
+            "id": 446632,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Thú Tượng Thạch Giáp_443193.png",
+            "id": 443193,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nguyệt Đao_226692.png",
+            "id": 226692,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Liềm Xích Huyết Thực_222517.png",
+            "id": 222517,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Thép Gai_223047.png",
+            "id": 223047,
+            "slot": 4
+          }
+        ],
+        "kills": 6,
+        "level": 16,
+        "name": "6 lần vô địch#12345",
+        "summoners": [
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Vua Poro Vi Hành.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Twitch_Icon.png",
+        "champion": "Twitch",
+        "deaths": 6,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Tinh Linh Tia Hextech_443081.png",
+            "id": 443081,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Cung Phong Linh_446671.png",
+            "id": 446671,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Kiếm của Tay Bạc_447101.png",
+            "id": 447101,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Vết Chém Thần Chết_443090.png",
+            "id": 443090,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Đa Năng_447107.png",
+            "id": 447107,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Mũ Huyết Thuật_447103.png",
+            "id": 447103,
+            "slot": 5
+          }
+        ],
+        "kills": 22,
+        "level": 18,
+        "name": "bòné6múisầuriêng#2308",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Trundle_Icon.png",
+        "champion": "Trundle",
+        "deaths": 8,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Phàm Ăn_223008.png",
+            "id": 223008,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Ỷ Thiên Kiếm_443060.png",
+            "id": 443060,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Suy Vong_223153.png",
+            "id": 223153,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Tam Hợp Kiếm_223078.png",
+            "id": 223078,
+            "slot": 3
+          }
+        ],
+        "kills": 5,
+        "level": 14,
+        "name": "Nà Ná Na Na#VA11",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png"
+        ]
+      }
+    ],
+    "team_4": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Pantheon_Icon.png",
+        "champion": "Pantheon",
+        "deaths": 5,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giáp Gai_223075.png",
+            "id": 223075,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Lưỡi Kiếm Hoàng Hôn_447121.png",
+            "id": 447121,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Thương Phục Hận Serylda_226694.png",
+            "id": 226694,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nguyệt Đao_226692.png",
+            "id": 226692,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Suy Vong_223153.png",
+            "id": 223153,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Kiếm Ác Xà_226695.png",
+            "id": 226695,
+            "slot": 5
+          }
+        ],
+        "kills": 5,
+        "level": 18,
+        "name": "Lách thuế vương#7339",
+        "summoners": [
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Lừa Gạt.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "https://ddragon.leagueoflegends.com/cdn/latest/img/champion/Name.png",
+        "champion": "Aatrox",
+        "deaths": 7,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Phàm Ăn_223008.png",
+            "id": 223008,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Mũ Huyết Thuật_447103.png",
+            "id": 447103,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giáo Thiên Ly_226610.png",
+            "id": 226610,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Liềm Xích Huyết Thực_222517.png",
+            "id": 222517,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Búa Rìu Sát Thần_446632.png",
+            "id": 446632,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Huyết Đao_447112.png",
+            "id": 447112,
+            "slot": 5
+          }
+        ],
+        "kills": 8,
+        "level": 18,
+        "name": "Tachibana#Mai",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Zed_Icon.png",
+        "champion": "Zed",
+        "deaths": 9,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nỏ Thần Dominik_223036.png",
+            "id": 223036,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Kiếm Ma Youmuu_223142.png",
+            "id": 223142,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nguyên Tố Luân_226696.png",
+            "id": 226696,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Súng Hải Tặc_226676.png",
+            "id": 226676,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Dạ Kiếm Draktharr_446691.png",
+            "id": 446691,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Vô Cực Kiếm_223031.png",
+            "id": 223031,
+            "slot": 5
+          }
+        ],
+        "kills": 9,
+        "level": 15,
+        "name": "Lặng#AnhJ",
+        "summoners": [
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Trói Hồn.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      }
+    ],
+    "team_5": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Yunara_Icon.png",
+        "champion": "Yunara",
+        "deaths": 10,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Cuồng Nộ_223006.png",
+            "id": 223006,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Tê Liệt_443069.png",
+            "id": 443069,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Vô Cực Kiếm_223031.png",
+            "id": 223031,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Phong Thần Kiếm_223095.png",
+            "id": 223095,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Vương Miện Quỷ Vương_443056.png",
+            "id": 443056,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Rìu Bùng Phát_443055.png",
+            "id": 443055,
+            "slot": 5
+          }
+        ],
+        "kills": 5,
+        "level": 15,
+        "name": "BaoDoHereAgain#vn2",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Tốc Biến <i>(đang hồi chiêu)</i>.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Kled_Icon.png",
+        "champion": "Kled",
+        "deaths": 6,
+        "is_dead": true,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Chùy Hấp Huyết_226630.png",
+            "id": 226630,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Dạ Kiếm Draktharr_446691.png",
+            "id": 446691,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Liềm Xích Huyết Thực_222517.png",
+            "id": 222517,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Súng Hải Tặc_226676.png",
+            "id": 226676,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Rìu Hỏa Ngục_4017.png",
+            "id": 4017,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Kiếm Điện Phong_226699.png",
+            "id": 226699,
+            "slot": 5
+          }
+        ],
+        "kills": 9,
+        "level": 16,
+        "name": "G 8 15 19 20#1907",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Singed_Icon.png",
+        "champion": "Singed",
+        "deaths": 4,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Bạc_223009.png",
+            "id": 223009,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trái Tim Rồng_447106.png",
+            "id": 447106,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Mặt Nạ Thống Khổ Liandry_226653.png",
+            "id": 226653,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Mũ Trụ Nguyền Rủa_444637.png",
+            "id": 444637,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Chùy Tàn Độc_447109.png",
+            "id": 447109,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trượng Pha Lê Rylai_223116.png",
+            "id": 223116,
+            "slot": 5
+          }
+        ],
+        "kills": 5,
+        "level": 18,
+        "name": "Anh Thuận Dubai#UAE",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      }
+    ],
+    "team_6": [
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Vi_Icon.png",
+        "champion": "Vi",
+        "deaths": 5,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Dạ Kiếm Draktharr_446691.png",
+            "id": 446691,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Súng Hải Tặc_226676.png",
+            "id": 226676,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nguyệt Quế Cao Ngạo_226697.png",
+            "id": 226697,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Tinh Linh Tia Hextech_443081.png",
+            "id": 443081,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Gươm Thức Thời_226701.png",
+            "id": 226701,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nỏ Thần Dominik_223036.png",
+            "id": 223036,
+            "slot": 5
+          }
+        ],
+        "kills": 17,
+        "level": 18,
+        "name": "Boom T Phúc#05944",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png",
+          "https://ddragon.leagueoflegends.com/cdn/latest/img/spell/Vua Poro Vi Hành.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Soraka_Icon.png",
+        "champion": "Soraka",
+        "deaths": 5,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Chuông Bảo Hộ Mikael_223222.png",
+            "id": 223222,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Nhẫn Hỏa Ảnh_447105.png",
+            "id": 447105,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Dây Chuyền Chuộc Tội_223107.png",
+            "id": 223107,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Bùa Nguyệt Thạch_226617.png",
+            "id": 226617,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trái Tim Rồng_447106.png",
+            "id": 447106,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Giày Khai Sáng Ionia_223158.png",
+            "id": 223158,
+            "slot": 5
+          }
+        ],
+        "kills": 2,
+        "level": 18,
+        "name": "UNPSBeta#1822",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      },
+      {
+        "augments": [
+          {
+            "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/item-icons/3348.png",
+            "id": 3348,
+            "name": "Máy Quét Hextech"
+          }
+        ],
+        "avatar": "http://127.0.0.1:5000/assets/Champion_Icons/Shyvana_Icon.png",
+        "champion": "Shyvana",
+        "deaths": 6,
+        "is_dead": false,
+        "items": [
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Ngọc Phát Nổ_447113.png",
+            "id": 447113,
+            "slot": 0
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Lưỡi Kiếm Hoàng Hôn_447121.png",
+            "id": 447121,
+            "slot": 1
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Trái Tim Khổng Thần_223084.png",
+            "id": 223084,
+            "slot": 2
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Bình Minh & Hoàng Hôn_222510.png",
+            "id": 222510,
+            "slot": 3
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Kiếm của Tay Bạc_447101.png",
+            "id": 447101,
+            "slot": 4
+          },
+          {
+            "icon": "http://127.0.0.1:5000/assets/Items/Item_Lá Chắn Đá Dung Nham_443058.png",
+            "id": 443058,
+            "slot": 5
+          }
+        ],
+        "kills": 6,
+        "level": 18,
+        "name": "anduiga007#2005",
+        "summoners": [
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tẩu Thoát.png",
+          "http://127.0.0.1:5000/assets/Spells/Spell_Tốc Biến.png"
+        ]
+      }
+    ]
+  },
+  "time": 1376.341552734375
+}

@@ -1,0 +1,2109 @@
+{
+    "activePlayer": {
+        "abilities": {
+            "E": {
+                "abilityLevel": 1,
+                "displayName": "Kết Án",
+                "id": "VayneCondemn",
+                "rawDescription": "GeneratedTip_Spell_VayneCondemn_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneCondemn_DisplayName"
+            },
+            "Passive": {
+                "displayName": "Thợ Săn Bóng Đêm",
+                "id": "VaynePassive",
+                "rawDescription": "GeneratedTip_Passive_VaynePassive_Description",
+                "rawDisplayName": "GeneratedTip_Passive_VaynePassive_DisplayName"
+            },
+            "Q": {
+                "abilityLevel": 5,
+                "displayName": "Nhào Lộn",
+                "id": "VayneTumble",
+                "rawDescription": "GeneratedTip_Spell_VayneTumble_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneTumble_DisplayName"
+            },
+            "R": {
+                "abilityLevel": 1,
+                "displayName": "Giờ Khắc Cuối Cùng",
+                "id": "VayneInquisition",
+                "rawDescription": "GeneratedTip_Spell_VayneInquisition_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneInquisition_DisplayName"
+            },
+            "W": {
+                "abilityLevel": 2,
+                "displayName": "Mũi Tên Bạc",
+                "id": "VayneSilveredBolts",
+                "rawDescription": "GeneratedTip_Spell_VayneSilveredBolts_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneSilveredBolts_DisplayName"
+            }
+        },
+        "championStats": {
+            "abilityHaste": 50.0,
+            "abilityPower": 0.0,
+            "armor": 78.3061752319336,
+            "armorPenetrationFlat": 0.0,
+            "armorPenetrationPercent": 1.0,
+            "attackDamage": 127.62124633789062,
+            "attackRange": 550.0,
+            "attackSpeed": 1.0591003894805908,
+            "bonusArmorPenetrationPercent": 1.0,
+            "bonusMagicPenetrationPercent": 1.0,
+            "critChance": 0.0,
+            "critDamage": 200.0,
+            "currentHealth": 2492.060302734375,
+            "healShieldPower": 0.0,
+            "healthRegenRate": 1.6652500629425049,
+            "lifeSteal": 0.0,
+            "magicLethality": 0.0,
+            "magicPenetrationFlat": 0.0,
+            "magicPenetrationPercent": 1.0,
+            "magicResist": 56.34867858886719,
+            "maxHealth": 2492.060302734375,
+            "moveSpeed": 415.0,
+            "omnivamp": 0.0,
+            "physicalLethality": 0.0,
+            "physicalVamp": 0.0,
+            "resourceMax": 789.125,
+            "resourceRegenRate": 9.60200023651123,
+            "resourceType": "MANA",
+            "resourceValue": 789.125,
+            "spellVamp": 0.0,
+            "tenacity": 5.0
+        },
+        "currentGold": 2755.0,
+        "fullRunes": {},
+        "level": 11,
+        "riotId": "Em Long Ixtal#ịuliz",
+        "riotIdGameName": "Em Long Ixtal",
+        "riotIdTagLine": "ịuliz",
+        "summonerName": "Em Long Ixtal#ịuliz",
+        "teamRelativeColors": true
+    },
+    "allPlayers": [
+        {
+            "championName": "Vayne",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Lưỡi Kiếm Kinkou",
+                    "itemID": 447116,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447116_Description",
+                    "rawDisplayName": "Item_447116_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Vayne",
+            "rawSkinName": "game_character_displayname_Vayne",
+            "respawnTimer": 9932.2724609375,
+            "riotId": "Em Long Ixtal#ịuliz",
+            "riotIdGameName": "Em Long Ixtal",
+            "riotIdTagLine": "ịuliz",
+            "runes": null,
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 4,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Vayne",
+            "summonerName": "Em Long Ixtal#ịuliz",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến <i>(đang hồi chiêu)</i>",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Ahri",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Pháp Sư",
+                    "itemID": 223020,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223020_Description",
+                    "rawDisplayName": "Item_223020_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trượng Cổ Ngữ",
+                    "itemID": 447108,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447108_Description",
+                    "rawDisplayName": "Item_447108_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Gậy Quá Khổ",
+                    "itemID": 221058,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_221058_Description",
+                    "rawDisplayName": "Item_221058_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Mũ Phù Thủy Rabadon",
+                    "itemID": 223089,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223089_Description",
+                    "rawDisplayName": "Item_223089_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Ahri",
+            "rawSkinName": "game_character_skin_displayname_Ahri_28",
+            "respawnTimer": 9840.7685546875,
+            "riotId": "HyunBokeeツ#4701",
+            "riotIdGameName": "HyunBokeeツ",
+            "riotIdTagLine": "4701",
+            "runes": null,
+            "scores": {
+                "assists": 5,
+                "creepScore": 0,
+                "deaths": 2,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 28,
+            "skinName": "K/DA ALL OUT Ahri",
+            "summonerName": "HyunBokeeツ#4701",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Illaoi",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Thủy Ngân",
+                    "itemID": 223111,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223111_Description",
+                    "rawDisplayName": "Item_223111_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Găng Tay Băng Giá",
+                    "itemID": 226662,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226662_Description",
+                    "rawDisplayName": "Item_226662_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Ngọn Đuốc Thánh Quang",
+                    "itemID": 446667,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_446667_Description",
+                    "rawDisplayName": "Item_446667_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Illaoi",
+            "rawSkinName": "game_character_skin_displayname_Illaoi_1",
+            "respawnTimer": 9980.65625,
+            "riotId": "Clid the Evilkid#Weezy",
+            "riotIdGameName": "Clid the Evilkid",
+            "riotIdTagLine": "Weezy",
+            "runes": null,
+            "scores": {
+                "assists": 4,
+                "creepScore": 0,
+                "deaths": 4,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 1,
+            "skinName": "Illaoi Sứ Giả Hư Không",
+            "summonerName": "Clid the Evilkid#Weezy",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Fiora",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Rìu Mãng Xà",
+                    "itemID": 223074,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223074_Description",
+                    "rawDisplayName": "Item_223074_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Mũ Huyết Thuật",
+                    "itemID": 447103,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447103_Description",
+                    "rawDisplayName": "Item_447103_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Fiora",
+            "rawSkinName": "game_character_skin_displayname_Fiora_22",
+            "respawnTimer": 9962.1455078125,
+            "riotId": "Giang Hồ Hề#3301",
+            "riotIdGameName": "Giang Hồ Hề",
+            "riotIdTagLine": "3301",
+            "runes": null,
+            "scores": {
+                "assists": 2,
+                "creepScore": 0,
+                "deaths": 5,
+                "kills": 2,
+                "wardScore": 0.0
+            },
+            "skinID": 22,
+            "skinName": "Fiora Phi Kiếm",
+            "summonerName": "Giang Hồ Hề#3301",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Skarner",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Phân Tách Vật Chất",
+                    "itemID": 223005,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223005_Description",
+                    "rawDisplayName": "Item_223005_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Cung Phong Linh",
+                    "itemID": 446671,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_446671_Description",
+                    "rawDisplayName": "Item_446671_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trái Tim Khổng Thần",
+                    "itemID": 223084,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223084_Description",
+                    "rawDisplayName": "Item_223084_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Skarner",
+            "rawSkinName": "game_character_skin_displayname_Skarner_2",
+            "respawnTimer": 9932.724609375,
+            "riotId": "NewPlayer007#vn2",
+            "riotIdGameName": "NewPlayer007",
+            "riotIdTagLine": "vn2",
+            "runes": null,
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 5,
+                "kills": 1,
+                "wardScore": 0.0
+            },
+            "skinID": 2,
+            "skinName": "Skarner Cổ Ngữ",
+            "summonerName": "NewPlayer007#vn2",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Karma",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Lưỡi Hái Bóng Đêm",
+                    "itemID": 444636,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_444636_Description",
+                    "rawDisplayName": "Item_444636_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trượng Cổ Ngữ",
+                    "itemID": 447108,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447108_Description",
+                    "rawDisplayName": "Item_447108_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Pháp Sư",
+                    "itemID": 223020,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223020_Description",
+                    "rawDisplayName": "Item_223020_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Karma",
+            "rawSkinName": "game_character_skin_displayname_Karma_26",
+            "respawnTimer": 9933.32421875,
+            "riotId": "lon khoa #vn2",
+            "riotIdGameName": "lon khoa ",
+            "riotIdTagLine": "vn2",
+            "runes": null,
+            "scores": {
+                "assists": 4,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 5,
+                "wardScore": 0.0
+            },
+            "skinID": 26,
+            "skinName": "Karma Tư Tế Không Gian",
+            "summonerName": "lon khoa #vn2",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Pantheon",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Khai Sáng Ionia",
+                    "itemID": 223158,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223158_Description",
+                    "rawDisplayName": "Item_223158_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Móng Vuốt Hắc Thiết",
+                    "itemID": 443054,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443054_Description",
+                    "rawDisplayName": "Item_443054_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Gươm Ảo Ảnh",
+                    "itemID": 447100,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447100_Description",
+                    "rawDisplayName": "Item_447100_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Pantheon",
+            "rawSkinName": "game_character_skin_displayname_Pantheon_16",
+            "respawnTimer": 9938.5546875,
+            "riotId": "SP Tkan#vn2",
+            "riotIdGameName": "SP Tkan",
+            "riotIdTagLine": "vn2",
+            "runes": null,
+            "scores": {
+                "assists": 3,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 4,
+                "wardScore": 0.0
+            },
+            "skinID": 16,
+            "skinName": "Pantheon Vũ Khí Tối Thượng",
+            "summonerName": "SP Tkan#vn2",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Dr. Mundo",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Thủy Ngân",
+                    "itemID": 223111,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223111_Description",
+                    "rawDisplayName": "Item_223111_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Áo Choàng Hắc Quang",
+                    "itemID": 226664,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226664_Description",
+                    "rawDisplayName": "Item_226664_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Áo Choàng Sao Đêm",
+                    "itemID": 443059,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443059_Description",
+                    "rawDisplayName": "Item_443059_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Tàn Tích Bami",
+                    "itemID": 226660,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_6660_Description",
+                    "rawDisplayName": "Item_6660_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_DrMundo",
+            "rawSkinName": "game_character_displayname_DrMundo",
+            "respawnTimer": 9956.1767578125,
+            "riotId": "Mata Trần#TAAM",
+            "riotIdGameName": "Mata Trần",
+            "riotIdTagLine": "TAAM",
+            "runes": null,
+            "scores": {
+                "assists": 7,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 1,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Dr. Mundo",
+            "summonerName": "Mata Trần#TAAM",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến <i>(đang hồi chiêu)</i>",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Vi",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Phàm Ăn",
+                    "itemID": 223008,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_3008_Description",
+                    "rawDisplayName": "Item_3008_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Kiếm của Tay Bạc",
+                    "itemID": 447101,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447101_Description",
+                    "rawDisplayName": "Item_447101_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Ỷ Thiên Kiếm",
+                    "itemID": 443060,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443060_Description",
+                    "rawDisplayName": "Item_443060_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Vi",
+            "rawSkinName": "game_character_displayname_Vi",
+            "respawnTimer": 9587.5703125,
+            "riotId": "MAI45CỒ CÁ SẶC#DoaAn",
+            "riotIdGameName": "MAI45CỒ CÁ SẶC",
+            "riotIdTagLine": "DoaAn",
+            "runes": null,
+            "scores": {
+                "assists": 7,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 4,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Vi",
+            "summonerName": "MAI45CỒ CÁ SẶC#DoaAn",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Pantheon",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Phàm Ăn",
+                    "itemID": 223008,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_3008_Description",
+                    "rawDisplayName": "Item_3008_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Nguyệt Kiếm",
+                    "itemID": 447110,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447110_Description",
+                    "rawDisplayName": "Item_447110_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Súng Hải Tặc",
+                    "itemID": 226676,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226676_Description",
+                    "rawDisplayName": "Item_226676_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Pantheon",
+            "rawSkinName": "game_character_skin_displayname_Pantheon_9",
+            "respawnTimer": 9608.048828125,
+            "riotId": "KhôngNgừngBỏCuộc#18050",
+            "riotIdGameName": "KhôngNgừngBỏCuộc",
+            "riotIdTagLine": "18050",
+            "runes": null,
+            "scores": {
+                "assists": 8,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 9,
+            "skinName": "Pantheon Đồ Long (Trân Châu)",
+            "summonerName": "KhôngNgừngBỏCuộc#18050",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Graves",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Ỷ Thiên Kiếm",
+                    "itemID": 443060,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443060_Description",
+                    "rawDisplayName": "Item_443060_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Súng Hải Tặc",
+                    "itemID": 226676,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226676_Description",
+                    "rawDisplayName": "Item_226676_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Graves",
+            "rawSkinName": "game_character_skin_displayname_Graves_16",
+            "respawnTimer": 9575.4794921875,
+            "riotId": "xin cục đá#vn2",
+            "riotIdGameName": "xin cục đá",
+            "riotIdTagLine": "vn2",
+            "runes": null,
+            "scores": {
+                "assists": 5,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 4,
+                "wardScore": 0.0
+            },
+            "skinID": 16,
+            "skinName": "Graves Vinh Quang (Đơn/Đôi)",
+            "summonerName": "xin cục đá#vn2",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Ryze",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Đồng Hồ Cát Zhonya",
+                    "itemID": 223157,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223157_Description",
+                    "rawDisplayName": "Item_223157_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Dây Chuyền Tự Lực",
+                    "itemID": 447104,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447104_Description",
+                    "rawDisplayName": "Item_447104_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Gậy Quá Khổ",
+                    "itemID": 221058,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_221058_Description",
+                    "rawDisplayName": "Item_221058_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Thép Gai",
+                    "itemID": 223047,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223047_Description",
+                    "rawDisplayName": "Item_223047_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Ryze",
+            "rawSkinName": "game_character_displayname_Ryze",
+            "respawnTimer": 9847.0859375,
+            "riotId": "HelloCoCo#VN123",
+            "riotIdGameName": "HelloCoCo",
+            "riotIdTagLine": "VN123",
+            "runes": null,
+            "scores": {
+                "assists": 3,
+                "creepScore": 0,
+                "deaths": 2,
+                "kills": 2,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Ryze",
+            "summonerName": "HelloCoCo#VN123",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Lucian",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Cung Phong Linh",
+                    "itemID": 446671,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_446671_Description",
+                    "rawDisplayName": "Item_446671_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Súng Hải Tặc",
+                    "itemID": 226676,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226676_Description",
+                    "rawDisplayName": "Item_226676_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Lucian",
+            "rawSkinName": "game_character_skin_displayname_Lucian_8",
+            "respawnTimer": 9844.3837890625,
+            "riotId": "Ackermannn#vn2",
+            "riotIdGameName": "Ackermannn",
+            "riotIdTagLine": "vn2",
+            "runes": null,
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 4,
+                "kills": 4,
+                "wardScore": 0.0
+            },
+            "skinID": 8,
+            "skinName": "Lucian Cao Bồi",
+            "summonerName": "Ackermannn#vn2",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Ambessa",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Huyết Đao",
+                    "itemID": 447112,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447112_Description",
+                    "rawDisplayName": "Item_447112_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Ambessa",
+            "rawSkinName": "game_character_displayname_Ambessa",
+            "respawnTimer": 9844.439453125,
+            "riotId": "Akashi#1301",
+            "riotIdGameName": "Akashi",
+            "riotIdTagLine": "1301",
+            "runes": null,
+            "scores": {
+                "assists": 4,
+                "creepScore": 0,
+                "deaths": 2,
+                "kills": 1,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Ambessa",
+            "summonerName": "Akashi#1301",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Yone",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Vết Chém Thần Chết",
+                    "itemID": 443090,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443090_Description",
+                    "rawDisplayName": "Item_443090_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Gươm Suy Vong",
+                    "itemID": 223153,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223153_Description",
+                    "rawDisplayName": "Item_223153_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Yone",
+            "rawSkinName": "game_character_skin_displayname_Yone_48",
+            "respawnTimer": 9601.259765625,
+            "riotId": "Cuộc đời lỗi#404",
+            "riotIdGameName": "Cuộc đời lỗi",
+            "riotIdTagLine": "404",
+            "runes": null,
+            "scores": {
+                "assists": 5,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 5,
+                "wardScore": 0.0
+            },
+            "skinID": 48,
+            "skinName": "HEARTSTEEL Yone (Nham Tinh)",
+            "summonerName": "Cuộc đời lỗi#404",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Karma",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Khai Sáng Ionia",
+                    "itemID": 223158,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223158_Description",
+                    "rawDisplayName": "Item_223158_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Bùa Thăng Hoa",
+                    "itemID": 443064,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_443064_Description",
+                    "rawDisplayName": "Item_443064_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Quyền Trượng Thiên Thần",
+                    "itemID": 223003,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_223003_Description",
+                    "rawDisplayName": "Item_223003_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Karma",
+            "rawSkinName": "game_character_skin_displayname_Karma_6",
+            "respawnTimer": 9936.927734375,
+            "riotId": "Lancer01#LCM",
+            "riotIdGameName": "Lancer01",
+            "riotIdTagLine": "LCM",
+            "runes": null,
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 4,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 6,
+            "skinName": "Karma Mùa Đông Kỳ Diệu",
+            "summonerName": "Lancer01#LCM",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Malzahar",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Khai Sáng Ionia",
+                    "itemID": 223158,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223158_Description",
+                    "rawDisplayName": "Item_223158_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Nguyệt Kiếm",
+                    "itemID": 447110,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447110_Description",
+                    "rawDisplayName": "Item_447110_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Bình Minh & Hoàng Hôn",
+                    "itemID": 222510,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_2510_Description",
+                    "rawDisplayName": "Item_2510_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Malzahar",
+            "rawSkinName": "game_character_skin_displayname_Malzahar_38",
+            "respawnTimer": 9581.7470703125,
+            "riotId": "MCMXCVIII#8088",
+            "riotIdGameName": "MCMXCVIII",
+            "riotIdTagLine": "8088",
+            "runes": null,
+            "scores": {
+                "assists": 6,
+                "creepScore": 0,
+                "deaths": 1,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 38,
+            "skinName": "Malzahar Tam Đại Danh Thần",
+            "summonerName": "MCMXCVIII#8088",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Samira",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giày Cuồng Nộ",
+                    "itemID": 223006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_223006_Description",
+                    "rawDisplayName": "Item_223006_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Mũ Huyết Thuật",
+                    "itemID": 447103,
+                    "price": 2750,
+                    "rawDescription": "GeneratedTip_Item_447103_Description",
+                    "rawDisplayName": "Item_447103_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Súng Hải Tặc",
+                    "itemID": 226676,
+                    "price": 2500,
+                    "rawDescription": "GeneratedTip_Item_226676_Description",
+                    "rawDisplayName": "Item_226676_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Máy Quét Hextech",
+                    "itemID": 3348,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3348_Description",
+                    "rawDisplayName": "game_item_displayname_3348",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "NONE",
+            "rawChampionName": "game_character_displayname_Samira",
+            "rawSkinName": "game_character_displayname_Samira",
+            "respawnTimer": 9973.2412109375,
+            "riotId": "ừacccccccccccccc#1144",
+            "riotIdGameName": "ừacccccccccccccc",
+            "riotIdTagLine": "1144",
+            "runes": null,
+            "scores": {
+                "assists": 2,
+                "creepScore": 0,
+                "deaths": 4,
+                "kills": 2,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "skinName": "Samira",
+            "summonerName": "ừacccccccccccccc#1144",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Tẩu Thoát",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Tốc Biến",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        }
+    ],
+    "events": {
+        "Events": [
+            {
+                "EventID": 0,
+                "EventName": "GameStart",
+                "EventTime": 0.011835699900984764
+            },
+            {
+                "Assisters": [
+                    "Clid the Evilkid",
+                    "ừacccccccccccccc"
+                ],
+                "EventID": 1,
+                "EventName": "ChampionKill",
+                "EventTime": 93.03234100341797,
+                "KillerName": "Giang Hồ Hề",
+                "VictimName": "NewPlayer007"
+            },
+            {
+                "EventID": 2,
+                "EventName": "FirstBlood",
+                "EventTime": 93.03234100341797,
+                "Recipient": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "KhôngNgừngBỏCuộc"
+                ],
+                "EventID": 3,
+                "EventName": "ChampionKill",
+                "EventTime": 95.16525268554688,
+                "KillerName": "Cuộc đời lỗi",
+                "VictimName": "Ackermannn"
+            },
+            {
+                "Assisters": [],
+                "EventID": 4,
+                "EventName": "ChampionKill",
+                "EventTime": 96.3849868774414,
+                "KillerName": "SP Tkan",
+                "VictimName": "HyunBokeeツ"
+            },
+            {
+                "Assisters": [
+                    "Mata Trần"
+                ],
+                "EventID": 5,
+                "EventName": "ChampionKill",
+                "EventTime": 101.52723693847656,
+                "KillerName": "lon khoa ",
+                "VictimName": "xin cục đá"
+            },
+            {
+                "Assisters": [
+                    "lon khoa "
+                ],
+                "EventID": 6,
+                "EventName": "ChampionKill",
+                "EventTime": 107.7947006225586,
+                "KillerName": "SP Tkan",
+                "VictimName": "MCMXCVIII"
+            },
+            {
+                "Assisters": [
+                    "Clid the Evilkid",
+                    "Giang Hồ Hề"
+                ],
+                "EventID": 7,
+                "EventName": "ChampionKill",
+                "EventTime": 112.24858093261719,
+                "KillerName": "ừacccccccccccccc",
+                "VictimName": "Em Long Ixtal"
+            },
+            {
+                "Assisters": [
+                    "HelloCoCo"
+                ],
+                "EventID": 8,
+                "EventName": "ChampionKill",
+                "EventTime": 113.61735534667969,
+                "KillerName": "Akashi",
+                "VictimName": "MAI45CỒ CÁ SẶC"
+            },
+            {
+                "EventID": 9,
+                "EventName": "MinionsSpawning",
+                "EventTime": 120.05105590820312
+            },
+            {
+                "Assisters": [
+                    "Clid the Evilkid",
+                    "Giang Hồ Hề"
+                ],
+                "EventID": 10,
+                "EventName": "ChampionKill",
+                "EventTime": 123.40380859375,
+                "KillerName": "ừacccccccccccccc",
+                "VictimName": "NewPlayer007"
+            },
+            {
+                "Assisters": [
+                    "Akashi"
+                ],
+                "EventID": 11,
+                "EventName": "ChampionKill",
+                "EventTime": 127.30723571777344,
+                "KillerName": "HelloCoCo",
+                "VictimName": "Cuộc đời lỗi"
+            },
+            {
+                "Assisters": [],
+                "EventID": 12,
+                "EventName": "ChampionKill",
+                "EventTime": 129.2382354736328,
+                "KillerName": "NewPlayer007",
+                "VictimName": "ừacccccccccccccc"
+            },
+            {
+                "Assisters": [
+                    "Clid the Evilkid",
+                    "ừacccccccccccccc"
+                ],
+                "EventID": 13,
+                "EventName": "ChampionKill",
+                "EventTime": 130.58895874023438,
+                "KillerName": "Giang Hồ Hề",
+                "VictimName": "Lancer01"
+            },
+            {
+                "Assisters": [
+                    "Akashi"
+                ],
+                "EventID": 14,
+                "EventName": "ChampionKill",
+                "EventTime": 134.09657287597656,
+                "KillerName": "HelloCoCo",
+                "VictimName": "KhôngNgừngBỏCuộc"
+            },
+            {
+                "EventID": 15,
+                "EventName": "Multikill",
+                "EventTime": 134.09657287597656,
+                "KillStreak": 2,
+                "KillerName": "HelloCoCo"
+            },
+            {
+                "Assisters": [
+                    "lon khoa ",
+                    "SP Tkan"
+                ],
+                "EventID": 16,
+                "EventName": "ChampionKill",
+                "EventTime": 248.4462432861328,
+                "KillerName": "Mata Trần",
+                "VictimName": "Ackermannn"
+            },
+            {
+                "Assisters": [
+                    "HyunBokeeツ",
+                    "MCMXCVIII"
+                ],
+                "EventID": 17,
+                "EventName": "ChampionKill",
+                "EventTime": 249.21810913085938,
+                "KillerName": "xin cục đá",
+                "VictimName": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "KhôngNgừngBỏCuộc"
+                ],
+                "EventID": 18,
+                "EventName": "ChampionKill",
+                "EventTime": 257.6123962402344,
+                "KillerName": "Cuộc đời lỗi",
+                "VictimName": "Em Long Ixtal"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "KhôngNgừngBỏCuộc"
+                ],
+                "EventID": 19,
+                "EventName": "ChampionKill",
+                "EventTime": 259.4438781738281,
+                "KillerName": "Cuộc đời lỗi",
+                "VictimName": "NewPlayer007"
+            },
+            {
+                "EventID": 20,
+                "EventName": "Multikill",
+                "EventTime": 259.4438781738281,
+                "KillStreak": 2,
+                "KillerName": "Cuộc đời lỗi"
+            },
+            {
+                "Assisters": [
+                    "SP Tkan",
+                    "Mata Trần"
+                ],
+                "EventID": 21,
+                "EventName": "ChampionKill",
+                "EventTime": 262.04229736328125,
+                "KillerName": "lon khoa ",
+                "VictimName": "HelloCoCo"
+            },
+            {
+                "Assisters": [
+                    "HyunBokeeツ",
+                    "MCMXCVIII"
+                ],
+                "EventID": 22,
+                "EventName": "ChampionKill",
+                "EventTime": 267.8392333984375,
+                "KillerName": "xin cục đá",
+                "VictimName": "ừacccccccccccccc"
+            },
+            {
+                "Assisters": [
+                    "Mata Trần"
+                ],
+                "EventID": 23,
+                "EventName": "ChampionKill",
+                "EventTime": 271.40570068359375,
+                "KillerName": "lon khoa ",
+                "VictimName": "Akashi"
+            },
+            {
+                "EventID": 24,
+                "EventName": "Multikill",
+                "EventTime": 271.40570068359375,
+                "KillStreak": 2,
+                "KillerName": "lon khoa "
+            },
+            {
+                "Assisters": [
+                    "lon khoa ",
+                    "Mata Trần"
+                ],
+                "EventID": 25,
+                "EventName": "ChampionKill",
+                "EventTime": 272.5615539550781,
+                "KillerName": "SP Tkan",
+                "VictimName": "Ackermannn"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "KhôngNgừngBỏCuộc"
+                ],
+                "EventID": 26,
+                "EventName": "ChampionKill",
+                "EventTime": 274.014892578125,
+                "KillerName": "Cuộc đời lỗi",
+                "VictimName": "Lancer01"
+            },
+            {
+                "Assisters": [
+                    "HyunBokeeツ",
+                    "xin cục đá"
+                ],
+                "EventID": 27,
+                "EventName": "ChampionKill",
+                "EventTime": 282.1368408203125,
+                "KillerName": "MCMXCVIII",
+                "VictimName": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [
+                    "xin cục đá",
+                    "MCMXCVIII"
+                ],
+                "EventID": 28,
+                "EventName": "ChampionKill",
+                "EventTime": 284.1791076660156,
+                "KillerName": "HyunBokeeツ",
+                "VictimName": "Clid the Evilkid"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC"
+                ],
+                "EventID": 29,
+                "EventName": "ChampionKill",
+                "EventTime": 349.0877685546875,
+                "KillerName": "KhôngNgừngBỏCuộc",
+                "VictimName": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [
+                    "lon khoa ",
+                    "Mata Trần"
+                ],
+                "EventID": 30,
+                "EventName": "ChampionKill",
+                "EventTime": 354.3907775878906,
+                "KillerName": "SP Tkan",
+                "VictimName": "NewPlayer007"
+            },
+            {
+                "Assisters": [
+                    "KhôngNgừngBỏCuộc",
+                    "Cuộc đời lỗi"
+                ],
+                "EventID": 31,
+                "EventName": "ChampionKill",
+                "EventTime": 358.63153076171875,
+                "KillerName": "MAI45CỒ CÁ SẶC",
+                "VictimName": "Clid the Evilkid"
+            },
+            {
+                "Assisters": [
+                    "SP Tkan",
+                    "Mata Trần"
+                ],
+                "EventID": 32,
+                "EventName": "ChampionKill",
+                "EventTime": 359.0270690917969,
+                "KillerName": "lon khoa ",
+                "VictimName": "Em Long Ixtal"
+            },
+            {
+                "Assisters": [],
+                "EventID": 33,
+                "EventName": "ChampionKill",
+                "EventTime": 366.8162536621094,
+                "KillerName": "Ackermannn",
+                "VictimName": "HyunBokeeツ"
+            },
+            {
+                "Assisters": [
+                    "Mata Trần"
+                ],
+                "EventID": 34,
+                "EventName": "ChampionKill",
+                "EventTime": 370.30145263671875,
+                "KillerName": "lon khoa ",
+                "VictimName": "Lancer01"
+            },
+            {
+                "Assisters": [
+                    "HyunBokeeツ"
+                ],
+                "EventID": 35,
+                "EventName": "ChampionKill",
+                "EventTime": 370.4310607910156,
+                "KillerName": "xin cục đá",
+                "VictimName": "Ackermannn"
+            },
+            {
+                "Assisters": [
+                    "xin cục đá"
+                ],
+                "EventID": 36,
+                "EventName": "ChampionKill",
+                "EventTime": 370.486572265625,
+                "KillerName": "MCMXCVIII",
+                "VictimName": "Akashi"
+            },
+            {
+                "Assisters": [],
+                "EventID": 37,
+                "EventName": "ChampionKill",
+                "EventTime": 373.1328125,
+                "KillerName": "MCMXCVIII",
+                "VictimName": "HelloCoCo"
+            },
+            {
+                "EventID": 38,
+                "EventName": "Multikill",
+                "EventTime": 373.1328125,
+                "KillStreak": 2,
+                "KillerName": "MCMXCVIII"
+            },
+            {
+                "Assisters": [
+                    "Cuộc đời lỗi"
+                ],
+                "EventID": 39,
+                "EventName": "ChampionKill",
+                "EventTime": 378.6361083984375,
+                "KillerName": "KhôngNgừngBỏCuộc",
+                "VictimName": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [],
+                "EventID": 40,
+                "EventName": "ChampionKill",
+                "EventTime": 384.2010498046875,
+                "KillerName": "MAI45CỒ CÁ SẶC",
+                "VictimName": "ừacccccccccccccc"
+            },
+            {
+                "Assisters": [
+                    "KhôngNgừngBỏCuộc",
+                    "Cuộc đời lỗi"
+                ],
+                "EventID": 41,
+                "EventName": "ChampionKill",
+                "EventTime": 391.4710388183594,
+                "KillerName": "MAI45CỒ CÁ SẶC",
+                "VictimName": "Clid the Evilkid"
+            },
+            {
+                "EventID": 42,
+                "EventName": "Multikill",
+                "EventTime": 391.4710388183594,
+                "KillStreak": 2,
+                "KillerName": "MAI45CỒ CÁ SẶC"
+            },
+            {
+                "Assisters": [
+                    "xin cục đá",
+                    "MCMXCVIII"
+                ],
+                "EventID": 43,
+                "EventName": "ChampionKill",
+                "EventTime": 458.31964111328125,
+                "KillerName": "HyunBokeeツ",
+                "VictimName": "Em Long Ixtal"
+            },
+            {
+                "Assisters": [
+                    "HyunBokeeツ",
+                    "MCMXCVIII"
+                ],
+                "EventID": 44,
+                "EventName": "ChampionKill",
+                "EventTime": 458.7719421386719,
+                "KillerName": "xin cục đá",
+                "VictimName": "NewPlayer007"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "KhôngNgừngBỏCuộc"
+                ],
+                "EventID": 45,
+                "EventName": "ChampionKill",
+                "EventTime": 459.3713073730469,
+                "KillerName": "Cuộc đời lỗi",
+                "VictimName": "lon khoa "
+            },
+            {
+                "Assisters": [
+                    "xin cục đá",
+                    "MCMXCVIII"
+                ],
+                "EventID": 46,
+                "EventName": "ChampionKill",
+                "EventTime": 462.9750061035156,
+                "KillerName": "HyunBokeeツ",
+                "VictimName": "Lancer01"
+            },
+            {
+                "EventID": 47,
+                "EventName": "Multikill",
+                "EventTime": 462.9750061035156,
+                "KillStreak": 2,
+                "KillerName": "HyunBokeeツ"
+            },
+            {
+                "Assisters": [
+                    "MAI45CỒ CÁ SẶC",
+                    "Cuộc đời lỗi"
+                ],
+                "EventID": 48,
+                "EventName": "ChampionKill",
+                "EventTime": 464.6022033691406,
+                "KillerName": "KhôngNgừngBỏCuộc",
+                "VictimName": "SP Tkan"
+            },
+            {
+                "Assisters": [
+                    "KhôngNgừngBỏCuộc",
+                    "Cuộc đời lỗi"
+                ],
+                "EventID": 49,
+                "EventName": "ChampionKill",
+                "EventTime": 482.2236633300781,
+                "KillerName": "MAI45CỒ CÁ SẶC",
+                "VictimName": "Mata Trần"
+            },
+            {
+                "Assisters": [
+                    "HelloCoCo",
+                    "Akashi"
+                ],
+                "EventID": 50,
+                "EventName": "ChampionKill",
+                "EventTime": 488.19281005859375,
+                "KillerName": "Ackermannn",
+                "VictimName": "Giang Hồ Hề"
+            },
+            {
+                "Assisters": [
+                    "Akashi"
+                ],
+                "EventID": 51,
+                "EventName": "ChampionKill",
+                "EventTime": 499.28863525390625,
+                "KillerName": "Ackermannn",
+                "VictimName": "ừacccccccccccccc"
+            },
+            {
+                "Assisters": [
+                    "HelloCoCo"
+                ],
+                "EventID": 52,
+                "EventName": "ChampionKill",
+                "EventTime": 506.7032775878906,
+                "KillerName": "Ackermannn",
+                "VictimName": "Clid the Evilkid"
+            },
+            {
+                "EventID": 53,
+                "EventName": "Multikill",
+                "EventTime": 506.7032775878906,
+                "KillStreak": 2,
+                "KillerName": "Ackermannn"
+            }
+        ]
+    },
+    "gameData": {
+        "gameMode": "CHERRY",
+        "gameTime": 525.0473022460938,
+        "mapName": "Map30",
+        "mapNumber": 30,
+        "mapTerrain": "Default"
+    }
+}
