@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arena HUD 4.0 - Strict 3v3v3v3v3v3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko:wght=500;600&display=swap");
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        margin: 0;
+        background: transparent;
+        font-family: "Teko";
+        color: white;
+        overflow: hidden;
+      }
+
+      .hud-main {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1840px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .clock {
+        font-size: 42px;
+        text-align: center;
+        color: #c8aa6e;
+        border: 1px solid #c8aa6e;
+        background: rgba(0, 0, 0, 0.8);
+        width: 180px;
+        padding: 5px;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /* Layout hiển thị 6 đội mặc định gom về giữa màn hình */
+      .bilateral-layout {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        width: 100%;
+        transition: all 0.8s ease;
+      }
+
+      /* Chế độ Chung kết hiển thị 2 đội nằm ngang cân đối */
+      .bilateral-layout.final-match-mode {
+        grid-template-columns: unset !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin: 120px auto 0 auto;
+        width: 100%;
+      }
+
+      .side {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition: all 0.8s ease;
+      }
+
+      .bilateral-layout.final-match-mode .side {
+        flex-direction: row !important;
+        gap: 50px;
+      }
+
+      .team-card {
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(6px);
+        border-left: 4px solid #c8aa6e;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        width: 420px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        transition:
+          transform 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+          opacity 0.6s ease,
+          max-height 0.8s ease,
+          width 0.8s ease,
+          margin 0.8s ease,
+          box-shadow 0.8s ease;
+        max-height: 500px;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .team-card.hide-stage {
+        transform: translateY(100px) scale(0.7);
+        opacity: 0;
+        max-height: 0;
+        width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        overflow: hidden;
+      }
+
+      .bilateral-layout.final-match-mode .team-card:not(.hide-stage) {
+        transform: scale(1.08);
+        box-shadow:
+          0 0 30px rgba(200, 170, 110, 0.4),
+          inset 0 0 15px rgba(200, 170, 110, 0.1);
+        border-color: #e5c583;
+      }
+
+      .team-label {
+        color: #c8aa6e;
+        font-size: 20px;
+        border-bottom: 1px solid rgba(200, 170, 110, 0.3);
+        margin-bottom: 8px;
+      }
+
+      .player-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 60px;
+        border-bottom: 1px solid #222;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 90px;
+        flex-shrink: 0;
+      }
+
+      .spells-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        flex-shrink: 0;
+      }
+
+      .avatar-wrap {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+      }
+
+      .avatar-wrap img.avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid #444;
+        border-radius: 4px;
+        filter: none !important;
+      }
+      .avatar-wrap img.avatar-img.dead {
+        filter: grayscale(1) !important;
+        border-color: red;
+      }
+
+      .lvl {
+        position: absolute;
+        bottom: -4px;
+        left: -4px;
+        background: #c8aa6e;
+        color: black;
+        font-weight: bold;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        border: 1px solid #000;
+      }
+
+      .kda {
+        color: #e74c3c;
+        width: 55px;
+        text-align: center;
+        font-size: 18px;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+
+      .augments-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 20px);
+        grid-template-rows: repeat(2, 20px);
+        gap: 2px;
+        flex-shrink: 0;
+      }
+
+      .aug-slot {
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .aug-slot img {
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+        filter: none !important;
+      }
+
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 20px);
+        grid-template-rows: repeat(2, 20px);
+        gap: 2px;
+        margin-left: 2px;
+        flex-shrink: 0;
+      }
+      .item-slot {
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border: 1px solid #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud" class="hud-main">
+      <div class="clock" id="time">00:00</div>
+      <div class="bilateral-layout" id="main-layout">
+        <div class="side" id="left-side"></div>
+        <div class="side" id="right-side"></div>
+      </div>
+    </div>
+    <script>
+      async function pollHUD() {
+        try {
+          const res = await fetch("http://127.0.0.1:5000/api/hud");
+          const data = await res.json();
+
+          if (data.status === "in_game") {
+            document.getElementById("hud").style.display = "flex";
+            const sec = Math.floor(data.time);
+            document.getElementById("time").innerText =
+              `${Math.floor(sec / 60)}:${(sec % 60).toString().padStart(2, "0")}`;
+
+            const teamKeys = Object.keys(data.teams).sort(
+              (a, b) => parseInt(a.split("_")[1]) - parseInt(b.split("_")[1]),
+            );
+
+            const focusTeamsRaw = localStorage.getItem("hud_focus_teams");
+            const focusTeams = focusTeamsRaw ? JSON.parse(focusTeamsRaw) : [];
+            const isFinalMode = focusTeams && focusTeams.length > 0;
+
+            const layoutEl = document.getElementById("main-layout");
+            if (isFinalMode) {
+              layoutEl.classList.add("final-match-mode");
+            } else {
+              layoutEl.classList.remove("final-match-mode");
+            }
+
+            let leftH = "",
+              rightH = "";
+
+            teamKeys.forEach((k, idx) => {
+              let pRows = "";
+              data.teams[k].forEach((p) => {
+                let augs = "",
+                  items = "";
+
+                // Tìm đoạn này trong hud.html và thay thế
+                // Tìm đoạn này trong hud.html và thay thế hoàn toàn
+                const rawAugments = Array.isArray(p.augments) ? p.augments : [];
+                for (let i = 0; i < 6; i++) {
+                  const a = rawAugments[i];
+                  const augImgUrl = a ? a.icon || a.image || "" : "";
+
+                  if (augImgUrl) {
+                    // 🛠️ ĐÃ XÓA ?v=... Giúp ảnh load đúng 1 lần từ ổ đĩa và đứng yên hoàn toàn!
+                    augs += `<div class="aug-slot"><img src="${augImgUrl}" onerror="this.onerror=null; this.style.display='none';"></div>`;
+                  } else {
+                    augs += `<div class="aug-slot"></div>`;
+                  }
+                }
+
+                const itemMap = {};
+                if (Array.isArray(p.items)) {
+                  p.items.forEach((it) => {
+                    if (it && typeof it.slot === "number") {
+                      itemMap[it.slot] = it;
+                    }
+                  });
+                }
+
+                for (let i = 0; i < 6; i++) {
+                  const item = itemMap[i];
+                  const itemImgUrl = item && item.icon ? item.icon : "";
+
+                  let baseItemId = item && item.id ? item.id : 0;
+                  if (baseItemId > 10000) baseItemId = baseItemId % 10000;
+
+                  const fallbackItemUrl = `https://ddragon.leagueoflegends.com/cdn/latest/img/item/${baseItemId}.png`;
+                  const finalImgUrl = itemImgUrl || fallbackItemUrl;
+
+                  items += `<div class="item-slot">${baseItemId ? `<img src="${finalImgUrl}" style="width: 100%; height:100%; border-radius: 2px;" onerror="this.onerror=null; this.src='${fallbackItemUrl}';">` : ""}</div>`;
+                }
+
+                const s1_url =
+                  p.summoners && p.summoners[0] ? p.summoners[0] : "";
+                const s2_url =
+                  p.summoners && p.summoners[1] ? p.summoners[1] : "";
+
+                const assists = p.assists !== undefined ? p.assists : 0;
+
+                pRows += `<div class="player-row">
+                          <div class="info-box">
+                            <div style="font-size:16px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.champion}</div>
+                            <div style="font-size:11px;color:#888;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.name}</div>
+                          </div>
+                          
+                          <div class="spells-box">
+                            <div style="width:18px;height:18px">${s1_url ? `<img src="${s1_url}" style="width:100%;height:100%;border-radius:2px;" onerror="this.style.opacity=0">` : ""}</div>
+                            <div style="width:18px;height:18px">${s2_url ? `<img src="${s2_url}" style="width:100%;height:100%;border-radius:2px;" onerror="this.style.opacity=0">` : ""}</div>
+                          </div>
+
+                          <div class="avatar-wrap">
+                            <img class="avatar-img ${p.is_dead ? "dead" : ""}" src="${p.avatar}" onerror="this.style.opacity=0" alt="">
+                            <div class="lvl">${p.level}</div>
+                          </div>
+                          
+                          <div class="kda">${p.kills}/${p.deaths}/${assists}</div>
+                          
+                          <div class="augments-grid">${augs}</div>
+                          <div class="items-grid">${items}</div>
+                      </div>`;
+              });
+
+              const currentTeamNum = idx + 1;
+
+              let hideClass = "";
+              if (isFinalMode) {
+                if (!focusTeams.includes(currentTeamNum)) {
+                  hideClass = "hide-stage";
+                }
+              }
+
+              let card = `<div class="team-card ${hideClass}"><div class="team-label">TEAM ${currentTeamNum}</div>${pRows}</div>`;
+
+              if (idx < 3) leftH += card;
+              else rightH += card;
+            });
+
+            document.getElementById("left-side").innerHTML = leftH;
+            document.getElementById("right-side").innerHTML = rightH;
+          } else {
+            document.getElementById("hud").style.display = "none";
+          }
+        } catch (e) {
+          console.error("Lỗi cập nhật HUD:", e);
+        } finally {
+          setTimeout(pollHUD, 1000);
+        }
+      }
+
+      pollHUD();
+    </script>
+  </body>
+</html>

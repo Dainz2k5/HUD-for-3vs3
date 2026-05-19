@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bảng Điều Khiển Trọng Tài - Cập Nhật Lõi Võ Đài</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #c8aa6e;
+        margin-bottom: 30px;
+      }
+      .admin-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .top-control-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        max-width: 1200px;
+        margin: 0 auto 20px auto;
+      }
+      .teams-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .team-box {
+        background: #252525;
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 15px;
+      }
+      .team-title {
+        color: #c8aa6e;
+        font-weight: bold;
+        font-size: 18px;
+        border-bottom: 2px solid #c8aa6e;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+      .player-row {
+        background: #1e1e1e;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+      .player-info {
+        font-weight: bold;
+        color: #5dade2;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .champ-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(243, 156, 18, 0.1);
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(243, 156, 18, 0.2);
+        color: #f39c12;
+        font-size: 12px;
+      }
+      .champ-mini-img {
+        width: 18px;
+        height: 18px;
+        object-fit: cover;
+        border-radius: 2px;
+        border: 1px solid #f39c12;
+      }
+
+      .slots-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .slot-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      label {
+        font-size: 11px;
+        color: #aaa;
+      }
+      input,
+      select {
+        background: #333;
+        border: 1px solid #555;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+      input:focus,
+      select:focus {
+        border-color: #c8aa6e;
+        outline: none;
+      }
+
+      .btn-main-action {
+        background: #c8aa6e;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background 0.2s;
+      }
+      .btn-main-action:hover {
+        background: #e5c583;
+      }
+
+      .btn-undo-action {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background 0.2s;
+      }
+      .btn-undo-action:hover {
+        background: #2980b9;
+      }
+
+      .btn-danger-action {
+        background: #c0392b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background 0.2s;
+      }
+      .btn-danger-action:hover {
+        background: #e74c3c;
+      }
+
+      .status-msg {
+        text-align: center;
+        color: #2ecc71;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 15px;
+        height: 20px;
+      }
+
+      .match-panel {
+        max-width: 1200px;
+        margin: 0 auto 20px auto;
+        background: #252525;
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 15px;
+      }
+      .panel-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        background: #1e1e1e;
+        padding: 10px;
+        border-radius: 6px;
+      }
+      .ring-title {
+        font-weight: bold;
+        color: #e74c3c;
+        width: 100px;
+      }
+      .vs-text {
+        color: #c8aa6e;
+        font-weight: bold;
+      }
+
+      .btn-ring-sync {
+        background: #2ecc71;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 12px;
+        margin-right: 10px;
+        transition: background 0.2s;
+      }
+      .btn-ring-sync:hover {
+        background: #27ae60;
+      }
+
+      .btn-reset-match {
+        background: #7f8c8d;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 12px;
+        transition: background 0.2s;
+      }
+      .btn-reset-match:hover {
+        background: #95a5a6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BẢNG ĐIỀU KHIỂN GIẢI ĐẤU ARENA 3V3V3V3V3V3</h1>
+
+    <div class="top-control-bar">
+      <button class="btn-main-action" onclick="loadCurrentMatchPlayers()">
+        🔄 SYNC GAME DATA
+      </button>
+      <button class="btn-undo-action" onclick="handleUndoAugment()">
+        ↩️ UNDO POOL (HOÀN TÁC)
+      </button>
+      <button
+        class="btn-danger-action"
+        onclick="handleResetAllAugmentsBackend()"
+      >
+        💥 RESET TOÀN BỘ LÕI
+      </button>
+    </div>
+
+    <div id="status" class="status-msg"></div>
+
+    <div class="match-panel">
+      <span style="color: #c8aa6e; font-weight: bold; font-size: 16px"
+        >⚔️ PHÂN CHIA CẶP ĐẤU THEO SÂN (VÕ ĐÀI) THÔNG MINH:</span
+      >
+
+      <div class="panel-row">
+        <div class="ring-title">🏟️ SÂN ĐẤU 1:</div>
+        <select
+          id="ring1-t1"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+        <span class="vs-text">VS</span>
+        <select
+          id="ring1-t2"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+      </div>
+
+      <div class="panel-row">
+        <div class="ring-title">🏟️ SÂN ĐẤU 2:</div>
+        <select
+          id="ring2-t1"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+        <span class="vs-text">VS</span>
+        <select
+          id="ring2-t2"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+      </div>
+
+      <div class="panel-row">
+        <div class="ring-title">🏟️ SÂN ĐẤU 3:</div>
+        <select
+          id="ring3-t1"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+        <span class="vs-text">VS</span>
+        <select
+          id="ring3-t2"
+          class="ring-selector"
+          onchange="handleRingSelectChange()"
+        >
+          <option value="0">-- Chọn Đội --</option>
+          <option value="1">Team 1</option>
+          <option value="2">Team 2</option>
+          <option value="3">Team 3</option>
+          <option value="4">Team 4</option>
+          <option value="5">Team 5</option>
+          <option value="6">Team 6</option>
+        </select>
+      </div>
+
+      <div style="text-align: center">
+        <button
+          type="button"
+          class="btn-ring-sync"
+          onclick="broadcastRingsMode()"
+        >
+          ⚡ ĐỒNG BỘ CẶP ĐẤU LÊN OBS
+        </button>
+        <button
+          type="button"
+          class="btn-reset-match"
+          onclick="clearRingsMode()"
+        >
+          ♻️ RESET CẶP ĐẤU
+        </button>
+      </div>
+    </div>
+
+    <div class="admin-container">
+      <div class="teams-grid" id="teams-layout"></div>
+    </div>
+
+    <datalist id="augments-alist"></datalist>
+
+    <script>
+      let allAugments = {};
+      let augmentHistoryStack = [];
+
+      // Định nghĩa danh sách ID đầy đủ của các ô select phục vụ phân tách logic
+      const SELECTOR_IDS = [
+        "ring1-t1",
+        "ring1-t2",
+        "ring2-t1",
+        "ring2-t2",
+        "ring3-t1",
+        "ring3-t2",
+      ];
+
+      window.onload = async function () {
+        try {
+          syncRingsFromStorage();
+          const res = await fetch("http://127.0.0.1:5000/api/augments_list");
+          const rawData = await res.json();
+          const augmentData = rawData && rawData.data ? rawData.data : rawData;
+
+          if (!augmentData || typeof augmentData !== "object") {
+            showStatus("⚠️ Cannot find valid Augment data structure!", true);
+            return;
+          }
+
+          const datalist = document.getElementById("augments-alist");
+          let optionsHtml = "";
+          allAugments = {};
+
+          Object.keys(augmentData).forEach((id) => {
+            const aug = augmentData[id];
+            if (aug && aug.name) {
+              const viName = aug.name.trim();
+              allAugments[viName.toLowerCase()] = id;
+              optionsHtml += `<option value="${viName}"></option>`;
+            }
+          });
+
+          datalist.innerHTML = optionsHtml;
+          loadCurrentMatchPlayers();
+        } catch (e) {
+          showStatus("❌ Error loading suggestions!", true);
+        }
+      };
+
+      /* 🔥 THUẬT TOÁN ĐIỀU PHỐI VÕ ĐÀI THÔNG MINH */
+      function handleRingSelectChange() {
+        // 1. Quét tìm tất cả các giá trị Đội tuyển đang được chọn ở các Sân (Loại trừ số 0)
+        let selectedTeams = [];
+        SELECTOR_IDS.forEach((id) => {
+          let val = parseInt(document.getElementById(id).value);
+          if (val > 0) selectedTeams.push(val);
+        });
+
+        // 2. TỰ ĐỘNG GHÉP CẶP SÂN CUỐI CÙNG NẾU 2 SÂN TRƯỚC ĐÃ ĐẦY ĐỦ (Có đúng 4 đội được gán)
+        if (selectedTeams.length === 4) {
+          // Khởi tạo mảng check loại trừ từ Team 1 đến Team 6
+          let allAvailableTeams = [1, 2, 3, 4, 5, 6];
+          let remainingTeams = allAvailableTeams.filter(
+            (t) => !selectedTeams.includes(t),
+          );
+
+          if (remainingTeams.length === 2) {
+            // Tìm ô select nào thuộc Sân cuối cùng chưa gán để tự động lấp đầy data
+            SELECTOR_IDS.forEach((id) => {
+              let el = document.getElementById(id);
+              if (parseInt(el.value) === 0) {
+                // Nhặt đội còn sót lại đẩy thẳng vào ô select trống
+                el.value = remainingTeams.shift();
+                selectedTeams.push(parseInt(el.value)); // Đẩy vào mảng check để lock
+              }
+            });
+          }
+        }
+
+        // 3. KHÓA ĐỘI (DYNAMIC DISABLE): Lặp qua toàn bộ option để khóa không cho chọn trùng
+        SELECTOR_IDS.forEach((currentId) => {
+          let currentSelect = document.getElementById(currentId);
+          let currentVal = parseInt(currentSelect.value);
+
+          for (let option of currentSelect.options) {
+            let optVal = parseInt(option.value);
+            if (optVal === 0) continue;
+
+            // Nếu Đội này đã được chọn ở một ô select khác, tiến hành ẩn và khóa option này lại
+            if (selectedTeams.includes(optVal) && optVal !== currentVal) {
+              option.disabled = true;
+              option.style.display = "none";
+            } else {
+              option.disabled = false;
+              option.style.display = "block";
+            }
+          }
+        });
+      }
+
+      async function loadCurrentMatchPlayers() {
+        showStatus("Syncing match players...");
+        try {
+          const res = await fetch("http://127.0.0.1:5000/api/hud");
+          const data = await res.json();
+
+          if (data.status !== "in_game") {
+            showStatus(
+              "⚠️ Game is not running or not in an active match!",
+              true,
+            );
+            return;
+          }
+
+          const layout = document.getElementById("teams-layout");
+          let gridHtml = "";
+
+          const teamKeys = Object.keys(data.teams).sort(
+            (a, b) => parseInt(a.split("_")[1]) - parseInt(b.split("_")[1]),
+          );
+
+          teamKeys.forEach((teamKey, index) => {
+            let playerBlocks = "";
+            data.teams[teamKey].forEach((player) => {
+              let slotInputs = "";
+              for (let i = 0; i < 6; i++) {
+                const currentAugName =
+                  player.augments && player.augments[i]
+                    ? player.augments[i].name
+                    : "";
+                slotInputs += `
+                    <div class="slot-input-group">
+                        <label>Slot ${i + 1}</label>
+                        <input type="text" list="augments-alist" placeholder="Search..." value="${currentAugName}" onchange="submitAugmentChange('${player.name}')">
+                    </div>
+                `;
+              }
+
+              playerBlocks += `
+                <div class="player-row" id="player-${player.name}">
+                    <div class="player-info">
+                        <span>👤 ${player.name}</span>
+                        <span class="champ-badge">
+                            <img class="champ-mini-img" src="${player.avatar}" onerror="this.style.display='none'">
+                            ${player.champion}
+                        </span>
+                    </div>
+                    <div class="slots-container" data-player="${player.name}">
+                        ${slotInputs}
+                    </div>
+                </div>
+              `;
+            });
+
+            gridHtml += `
+                <div class="team-box">
+                    <div class="team-title">TEAM ${index + 1}</div>
+                    ${playerBlocks}
+                </div>
+            `;
+          });
+
+          layout.innerHTML = gridHtml;
+          showStatus("✅ Match data synchronized successfully!");
+        } catch (e) {
+          showStatus("❌ Error connecting to HUD API!", true);
+        }
+      }
+
+      async function submitAugmentChange(playerName) {
+        const playerRow = document.getElementById(`player-${playerName}`);
+        if (!playerRow) return;
+
+        const inputs = playerRow.querySelectorAll("input");
+        saveCurrentStateToHistory();
+
+        let augmentIds = [];
+        inputs.forEach((input) => {
+          const textValue = input.value.trim().toLowerCase();
+          if (textValue && allAugments[textValue]) {
+            augmentIds.push(parseInt(allAugments[textValue]));
+          }
+        });
+
+        executePostUpdate(playerName, augmentIds);
+      }
+
+      async function executePostUpdate(playerName, augmentIds) {
+        try {
+          await fetch("http://127.0.0.1:5000/api/update_augment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              playerName: playerName,
+              augmentIds: augmentIds,
+            }),
+          });
+        } catch (error) {
+          console.error("Error updating augment:", error);
+        }
+      }
+
+      function saveCurrentStateToHistory() {
+        const rows = document.querySelectorAll(".player-row");
+        let stateSnapshot = [];
+        rows.forEach((row) => {
+          const pName = row.id.replace("player-", "");
+          const inputs = row.querySelectorAll("input");
+          let augIds = [];
+          inputs.forEach((input) => {
+            const val = input.value.trim().toLowerCase();
+            if (val && allAugments[val])
+              augIds.push(parseInt(allAugments[val]));
+          });
+          stateSnapshot.push({ playerName: pName, ids: augIds });
+        });
+        augmentHistoryStack.push(stateSnapshot);
+        if (augmentHistoryStack.length > 15) augmentHistoryStack.shift();
+      }
+
+      async function handleUndoAugment() {
+        if (augmentHistoryStack.length === 0) {
+          alert("⚠️ Không có thao tác nào trước đó để hoàn tác!");
+          return;
+        }
+        showStatus("🔄 Undoing last action...");
+        const previousState = augmentHistoryStack.pop();
+        for (const item of previousState) {
+          await executePostUpdate(item.playerName, item.ids);
+        }
+        await loadCurrentMatchPlayers();
+        showStatus("↩️ Hoàn tác thành công bước chọn lõi!");
+      }
+
+      async function handleResetAllAugmentsBackend() {
+        if (
+          !confirm(
+            "⚠️ Bạn có chắc chắn muốn XÓA SẠCH LÕI nâng cấp của tất cả 18 người chơi không?",
+          )
+        )
+          return;
+        showStatus("💥 Đang dọn dẹp sạch sẽ kho Lõi nâng cấp...");
+        const rows = document.querySelectorAll(".player-row");
+        saveCurrentStateToHistory();
+        for (const row of rows) {
+          const pName = row.id.replace("player-", "");
+          await executePostUpdate(pName, []);
+        }
+        await loadCurrentMatchPlayers();
+        showStatus("💥 Đã xóa sạch toàn bộ Lõi nâng cấp trận đấu về ô trống!");
+      }
+
+      function showStatus(msg, isError = false) {
+        const el = document.getElementById("status");
+        el.innerText = msg;
+        el.style.color = isError ? "#e74c3c" : "#2ecc71";
+      }
+
+      async function broadcastRingsMode() {
+        let ringsConfig = {
+          ring1: [
+            parseInt(document.getElementById("ring1-t1").value),
+            parseInt(document.getElementById("ring1-t2").value),
+          ],
+          ring2: [
+            parseInt(document.getElementById("ring2-t1").value),
+            parseInt(document.getElementById("ring2-t2").value),
+          ],
+          ring3: [
+            parseInt(document.getElementById("ring3-t1").value),
+            parseInt(document.getElementById("ring3-t2").value),
+          ],
+        };
+        // Lưu lên Server để vMix có thể đọc được
+        try {
+          await fetch("http://127.0.0.1:5000/api/update_rings", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(ringsConfig),
+          });
+          // Vẫn lưu localStorage dự phòng cho Admin nếu load lại trang
+          localStorage.setItem("hud_arena_rings", JSON.stringify(ringsConfig));
+          showStatus(
+            "⚡ Đã đồng bộ cấu trúc cặp đấu 3 Sân lên OBS/vMix thành công!",
+          );
+        } catch (e) {
+          showStatus("❌ Lỗi khi đồng bộ cặp đấu lên Server!", true);
+        }
+      }
+
+      async function clearRingsMode() {
+        SELECTOR_IDS.forEach((id) => {
+          document.getElementById(id).value = 0;
+        });
+        localStorage.setItem("hud_arena_rings", JSON.stringify(null));
+        try {
+          await fetch("http://127.0.0.1:5000/api/update_rings", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(null),
+          });
+        } catch (e) {}
+        // Reset trạng thái hiển thị mở khóa toàn bộ các option select
+        handleRingSelectChange();
+        showStatus(
+          "♻️ Đã đưa cấu trúc Sân đấu về mặc định. (Lõi nâng cấp giữ nguyên)",
+        );
+      }
+
+      async function syncRingsFromStorage() {
+        try {
+          // Lấy cấu hình từ Server trước
+          const res = await fetch("http://127.0.0.1:5000/api/get_rings");
+          let config = await res.json();
+          
+          // Nếu server trống thì thử lấy từ localStorage
+          if (!config || Object.keys(config).length === 0) {
+            const dataRaw = localStorage.getItem("hud_arena_rings");
+            config = dataRaw ? JSON.parse(dataRaw) : null;
+          }
+
+          if (config) {
+            document.getElementById("ring1-t1").value = config.ring1[0] || 0;
+            document.getElementById("ring1-t2").value = config.ring1[1] || 0;
+            document.getElementById("ring2-t1").value = config.ring2[0] || 0;
+            document.getElementById("ring2-t2").value = config.ring2[1] || 0;
+            document.getElementById("ring3-t1").value = config.ring3[0] || 0;
+            document.getElementById("ring3-t2").value = config.ring3[1] || 0;
+            // Chạy kích hoạt bộ lọc khóa trùng ngay sau khi nạp cấu hình cũ
+            handleRingSelectChange();
+          }
+        } catch (e) {
+            console.error("Lỗi khi tải cấu hình cặp đấu:", e);
+        }
+      }
+    </script>
+  </body>
+</html>

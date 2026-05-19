@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VÕ ĐÀI 1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko:wght=500;600&display=swap");
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: transparent !important; /* Đảm bảo vMix luôn trong suốt */
+        font-family: "Teko", sans-serif;
+        color: white;
+        overflow: hidden;
+        /* MẸO VMIX: Giúp click chuột xuyên qua HUD để tương tác video phía dưới nếu cần */
+        pointer-events: none;
+      }
+
+      /* Khung bọc phủ toàn màn hình, ép cụm nội dung ghim chặt đáy dưới */
+      .ring-wrapper-fixed {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 880px;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        box-sizing: border-box;
+        pointer-events: auto; /* Kích hoạt lại tương tác chuột chỉ riêng trong vùng HUD này */
+      }
+
+      .ring-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 10px 0 10px;
+        background: rgba(
+          20,
+          20,
+          20,
+          0.85
+        ); /* Tăng nhẹ độ mờ để nhìn rõ trên luồng stream */
+        border: 2px solid #e74c3c;
+        border-bottom: none;
+        border-radius: 12px 12px 0 0;
+        box-sizing: border-box;
+        width: 100%;
+        box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.6);
+      }
+      .ring-title {
+        color: #e74c3c;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 4px #000;
+        margin-top: 2px;
+      }
+      .teams-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        align-items: flex-end;
+      }
+      .team-card {
+        background: rgba(0, 0, 0, 0.9);
+        border-left: 4px solid #c8aa6e;
+        border-radius: 6px 6px 0 0;
+        padding: 6px 6px 2px 6px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        width: 420px;
+        box-sizing: border-box;
+        margin-bottom: 0;
+      }
+      .team-label {
+        color: #c8aa6e;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(200, 170, 110, 0.3);
+        margin-bottom: 4px;
+      }
+      .player-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 56px;
+        border-bottom: 1px solid #222;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .player-row:last-child {
+        border-bottom: none;
+      }
+      .info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        width: 90px;
+        flex-shrink: 0;
+      }
+      .spells-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex-shrink: 0;
+      }
+      .avatar-wrap {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+      .avatar-wrap img.avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid #444;
+        border-radius: 4px;
+      }
+      .avatar-wrap img.avatar-img.dead {
+        filter: grayscale(1) brightness(0.6) !important; /* Tối hẳn avatar khi chết */
+        border-color: #e74c3c;
+      }
+      .lvl {
+        position: absolute;
+        bottom: -4px;
+        left: -4px;
+        background: #c8aa6e;
+        color: black;
+        font-weight: bold;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        font-size: 13px;
+        text-align: center;
+        line-height: 18px;
+        border: 1px solid #000;
+      }
+      .kda {
+        color: #e74c3c;
+        width: 55px;
+        text-align: center;
+        font-size: 17px;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .augments-grid,
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 19px);
+        grid-template-rows: repeat(2, 19px);
+        gap: 2px;
+        flex-shrink: 0;
+      }
+      .aug-slot,
+      .item-slot {
+        width: 19px;
+        height: 19px;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .aug-slot img,
+      .item-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .empty-msg {
+        text-align: center;
+        color: #aa8a4a;
+        font-size: 22px;
+        padding: 25px 0;
+        font-style: italic;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ring-wrapper-fixed" id="ring-root">
+      <div class="ring-container">
+        <div class="ring-title">VÕ ĐÀI 1</div>
+        <div class="teams-wrapper" id="teams-content"></div>
+      </div>
+    </div>
+
+    <script>
+      // Khai báo một phiên bản tĩnh cụ thể của DDragon để tránh lỗi link động "latest" bị Riot chặn
+      const DDRAGON_VERSION = "14.22.1";
+
+      async function pollRing() {
+        try {
+          const [hudRes, ringsRes] = await Promise.all([
+            fetch("http://127.0.0.1:5000/api/hud", {
+              headers: { Accept: "application/json" },
+            }),
+            fetch("http://127.0.0.1:5000/api/get_rings", {
+              headers: { Accept: "application/json" },
+            }), // 🔥 Gọi thẳng API Server
+          ]);
+
+          const data = await hudRes.json();
+          const ringsConfig = await ringsRes.json();
+
+          if (data.status === "in_game") {
+            // 🔥 THAY ĐỔI QUAN TRỌNG: Đọc trực tiếp từ object cấu hình API trả về, bỏ localStorage dính bẫy bảo mật
+            const targetTeams =
+              ringsConfig && ringsConfig.ring1 ? ringsConfig.ring1 : [0, 0];
+
+            if (targetTeams[0] > 0 || targetTeams[1] > 0) {
+              document.getElementById("ring-root").style.display = "flex";
+            } else {
+              document.getElementById("ring-root").style.display = "none";
+              return;
+            }
+
+            let htmlContent = "";
+            const teamKeys = Object.keys(data.teams).sort(
+              (a, b) => parseInt(a.split("_")[1]) - parseInt(b.split("_")[1]),
+            );
+
+            function buildTeamCard(teamIdx) {
+              const k = teamKeys[teamIdx - 1];
+              if (!k || !data.teams[k]) return "";
+
+              let pRows = "";
+              data.teams[k].forEach((p) => {
+                let augs = "",
+                  items = "";
+
+                // Render Nâng Cấp (Augments)
+                const rawAugments = Array.isArray(p.augments) ? p.augments : [];
+                for (let i = 0; i < 6; i++) {
+                  const a = rawAugments[i];
+                  augs += `<div class="aug-slot">${a && a.icon ? `<img src="${a.icon}">` : ""}</div>`;
+                }
+
+                // Render Trang bị (Items)
+                const itemMap = {};
+                if (Array.isArray(p.items)) {
+                  p.items.forEach((it) => {
+                    if (it && typeof it.slot === "number")
+                      itemMap[it.slot] = it;
+                  });
+                }
+
+                for (let i = 0; i < 6; i++) {
+                  const item = itemMap[i];
+                  let baseItemId = item && item.id ? item.id : 0;
+                  if (baseItemId > 10000) baseItemId = baseItemId % 10000;
+
+                  const fallbackItemUrl = `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}/img/item/${baseItemId}.png`;
+                  const itemIconSrc =
+                    item && item.icon ? item.icon : fallbackItemUrl;
+
+                  items += `<div class="item-slot">${baseItemId ? `<img src="${itemIconSrc}" onerror="this.onerror=null; this.src='${fallbackItemUrl}';">` : ""}</div>`;
+                }
+
+                pRows += `<div class="player-row">
+                  <div class="info-box">
+                    <div style="font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;">${p.champion}</div>
+                    <div style="font-size:11px;color:#aaa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.name}</div>
+                  </div>
+                  <div class="spells-box">
+                    <div style="width:16px;height:16px">${p.summoners[0] ? `<img src="${p.summoners[0]}" style="width:100%;height:100%;border-radius:2px;">` : ""}</div>
+                    <div style="width:16px;height:16px">${p.summoners[1] ? `<img src="${p.summoners[1]}" style="width:100%;height:100%;border-radius:2px;">` : ""}</div>
+                  </div>
+                  <div class="avatar-wrap">
+                    <img class="avatar-img ${p.is_dead ? "dead" : ""}" src="${p.avatar}">
+                    <div class="lvl">${p.level}</div>
+                  </div>
+                  <div class="kda">${p.kills}/${p.deaths}/${p.assists || 0}</div>
+                  <div class="augments-grid">${augs}</div>
+                  <div class="items-grid">${items}</div>
+                </div>`;
+              });
+
+              return `<div class="team-card"><div class="team-label">TEAM ${teamIdx}</div>${pRows}</div>`;
+            }
+
+            if (targetTeams[0] > 0)
+              htmlContent += buildTeamCard(targetTeams[0]);
+            if (targetTeams[1] > 0)
+              htmlContent += buildTeamCard(targetTeams[1]);
+
+            document.getElementById("teams-content").innerHTML = htmlContent;
+          } else {
+            document.getElementById("ring-root").style.display = "none";
+          }
+        } catch (e) {
+          console.error("Lỗi kết nối API HUD:", e);
+        } finally {
+          setTimeout(pollRing, 1000);
+        }
+      }
+      pollRing();
+    </script>
+  </body>
+</html>

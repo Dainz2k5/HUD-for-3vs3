@@ -1,14 +1,11 @@
 import time
 import os
 import re
+import sys
 
-# --- Cấu hình ---
-# THAY ĐỔI ĐƯỜNG DẪN NÀY tới thư mục cài đặt game của bạn nếu cần
-# Thông thường, nó sẽ nằm ở một trong các đường dẫn sau:
-# "C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs"
-# "D:\\Games\\League of Legends\\Logs\\Game - R3d Logs"
-LOL_LOG_PATH = "C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs"
-# ----------------
+# Thêm thư mục gốc vào sys.path để có thể import config
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import config
 
 def find_latest_log_file(log_directory):
     """Tìm file log mới nhất trong thư mục log của game."""
@@ -43,12 +40,12 @@ def main():
     """
     last_log_file = None
     print("--- Bắt đầu chương trình theo dõi Log Game ---")
-    print(f"Thư mục Log đang được giám sát: {LOL_LOG_PATH}")
+    print(f"Thư mục Log đang được giám sát: {config.LOL_LOG_PATH}")
     print("Đang chờ trận đấu bắt đầu...")
 
     try:
         while True:
-            current_log_file = find_latest_log_file(LOL_LOG_PATH)
+            current_log_file = find_latest_log_file(config.LOL_LOG_PATH)
 
             # Nếu không có file log (chưa vào trận), đợi và thử lại
             if not current_log_file:

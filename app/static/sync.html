@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Công cụ Đồng bộ Lõi Võ Đài</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background-color: #121212;
+        color: #eee;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+      }
+      .panel {
+        background: #1e1e1e;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        width: 400px;
+      }
+      h2 {
+        color: #00a8ff;
+        text-align: center;
+        margin-top: 0;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #444;
+        background: #2a2a2a;
+        color: white;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 14px;
+        background: #00a8ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #008ecc;
+      }
+      #result {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        display: none;
+        font-weight: bold;
+        text-align: center;
+      }
+      .success {
+        background: rgba(46, 125, 50, 0.2);
+        border: 1px solid #2e7d32;
+        color: #81c784;
+      }
+      .error {
+        background: rgba(198, 40, 40, 0.2);
+        border: 1px solid #c62828;
+        color: #e57373;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h2>ĐỒNG BỘ LÕI NÂNG CẤP</h2>
+
+      <div class="form-group">
+        <label for="matchId">ID Trận Đấu (Xem trong game):</label>
+        <input type="text" id="matchId" placeholder="Ví dụ: 1397460001" />
+      </div>
+
+      <div class="form-group">
+        <label for="platformId">Mã Máy Chủ (Platform ID):</label>
+        <input
+          type="text"
+          id="platformId"
+          placeholder="Ví dụ: VN2, KR, NA1"
+          value="VN2"
+        />
+      </div>
+
+      <button id="syncBtn" onclick="syncMatch()">Tiến Hành Đồng Bộ</button>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      async function syncMatch() {
+        const matchId = document.getElementById("matchId").value.trim();
+        const platformId = document.getElementById("platformId").value.trim();
+        const resultDiv = document.getElementById("result");
+
+        if (!matchId || !platformId) {
+          alert("Vui lòng nhập đầy đủ thông tin!");
+          return;
+        }
+
+        resultDiv.style.display = "block";
+        resultDiv.className = "";
+        resultDiv.innerText = "Đang đồng bộ dữ liệu với Riot API...";
+
+        try {
+          const response = await fetch(
+            `/api/sync_match_by_id?matchId=${matchId}&platformId=${platformId}`,
+          );
+
+          if (
+            !response.ok &&
+            !response.headers.get("content-type")?.includes("application/json")
+          ) {
+            if (response.status === 404) {
+              throw new Error(
+                "Lỗi 404: Web không tìm thấy API của Tool!\n\n1. Hãy chắc chắn bạn mở đúng link http://127.0.0.1:5000/sync.html (KHÔNG mở bằng Live Server hay click đúp vào file).\n2. Chắc chắn bạn đã nhấn Ctrl+S để LƯU file routes.py trước khi chạy Server.",
+              );
+            } else {
+              throw new Error(
+                `Server đang báo lỗi hệ thống (Status: ${response.status})`,
+              );
+            }
+          }
+
+          const data = await response.json();
+          resultDiv.className = data.status === "ok" ? "success" : "error";
+          resultDiv.innerText = data.message;
+        } catch (error) {
+          resultDiv.className = "error";
+          if (error.message.includes("Server đang báo lỗi")) {
+            resultDiv.innerText = error.message;
+          } else {
+            resultDiv.innerText =
+              "Lỗi kết nối tới Tool! Server có thể đang tắt hoặc bị sập đột ngột.\nChi tiết: " +
+              error.message;
+          }
+          console.error("Chi tiết lỗi:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

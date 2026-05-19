@@ -1,0 +1,4 @@
+Launching app.py as background process
+Launched pid=6692
+STDERR: C:\Users\lancermedia\AppData\Local\Programs\Python\Python314\python.exe: can't open file 'D:\\CODE\\app.py': [Errno 2] No such file or directory
+

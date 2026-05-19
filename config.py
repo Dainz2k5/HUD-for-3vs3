@@ -13,9 +13,9 @@ LIVE_API_URL = "https://127.0.0.1:2999/liveclientdata/allgamedata"
 
 # --- Cấu hình Riot API (lấy từ developer.riotgames.com) ---
 # Ưu tiên lấy key từ biến môi trường, nếu không có thì dùng key được viết cứng bên dưới.
-# Đảm bảo bạn đã thay thế "RGAPI-..." bằng key mới nhất của bạn.
+# QUAN TRỌNG: Key phát triển chỉ có hiệu lực 24 giờ. Hãy tạo key mới và dán vào đây.
 RIOT_API_KEY = os.getenv("RIOT_API_KEY", "RGAPI-965204b7-00d3-46dd-918b-c0ff9d7d4adb")
-RIOT_API_REGION = "asia" # americas, asia, europe, sea
+RIOT_API_REGION = "sea" # Giá trị mặc định, ứng dụng sẽ tự chọn khu vực đúng
 
 # --- Cấu hình đường dẫn ---
 ASSET_FOLDER_NAME = "static"
@@ -27,3 +27,5 @@ AUGMENT_ICON_DIR = os.path.join(ASSET_ROOT, "Augments")
 LOL_LOG_PATH = "C:\\Riot Games\\League of Legends\\Logs\\Game - R3d Logs"
 LOL_CLIENT_PATH = "C:\\Riot Games\\League of Legends"
 CD_ARENA_JSON_PATH = os.path.join(APP_ROOT, "arena_augments.json")
+# Thêm dòng này vào config.py của bạn
+CD_ARENA_JSON_PATH_VI = "data/arena_augments_vi.json" # Điều chỉnh đường dẫn tương ứng với thư mục của bạn

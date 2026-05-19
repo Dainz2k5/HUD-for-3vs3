@@ -1,6 +1,3 @@
-pytesseract
-opencv-python
-Pillow
 flask
 flask-cors
 requests
